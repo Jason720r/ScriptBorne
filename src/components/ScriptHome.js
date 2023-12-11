@@ -18,13 +18,12 @@ export const Home = () => {
     return (
         <>
         <div className="home_container">
-            <div>Welcome</div>
-            <div className="boss_container">
-                <h1>ARE YOU WILLING TO CHALLENGE THE BOSSES?????</h1>
-                <div className="boss_preview">
-                    <img src="https://static.tvtropes.org/pmwiki/pub/images/1527763051_preview_default_giant_dad.png" alt="Solaire" />
-                </div>
-            </div>
+            <div>Welcome Challenger</div>
+           <fieldset>
+            <button type="button" className="entry_button" onClick={() => navigate('/main')}>
+                Enter the Lands of FRANKLIN!
+            </button>
+           </fieldset>
             </div>
             </>
     )
