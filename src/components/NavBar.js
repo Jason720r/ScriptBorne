@@ -16,6 +16,13 @@ export const NavBar = () => {
     <span></span>
 </Link>
 </li>
+<li className="navbar__item">
+    <Link className="nav-link" to="/main">
+    <i className="fas fa-edit"></i>
+    <div className="main_nav">Main</div>
+    <span></span>
+</Link>
+</li>
 </ul>
     )
 }
