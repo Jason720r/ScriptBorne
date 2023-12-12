@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
-
+import "./Script.css"
 
 
 export const Home = () => {
@@ -23,7 +23,7 @@ export const Home = () => {
             <p>--------</p>
             <div>Welcome Challenger</div>
             <p>--------</p>
-           <fieldset>
+           <fieldset className="entry_field">
             <button type="button" className="entry_button" onClick={() => navigate('/main')}>
                 Enter the Lands of Brandtrun!
             </button>
