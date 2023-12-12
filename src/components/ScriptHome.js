@@ -21,7 +21,7 @@ export const Home = () => {
             <div>Welcome Challenger</div>
            <fieldset>
             <button type="button" className="entry_button" onClick={() => navigate('/main')}>
-                Enter the Lands of FRANKLIN!
+                Enter the Lands of Brandtrun!
             </button>
            </fieldset>
             </div>
