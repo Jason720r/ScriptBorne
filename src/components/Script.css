@@ -1,0 +1,17 @@
+
+.entry_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    text-align: center;
+}
+.entry_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    text-align: center;
+}
