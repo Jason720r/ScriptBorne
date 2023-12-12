@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Franklin } from "./components/views/MainView.js";
 import { CharacterInfo } from "./components/views/CharacterView.js";
 import { AboutUs } from "./components/About.js";
+import { Home } from "./components/ScriptHome.js";
 export const ApplicationViews =() => {
     return <>
     <Routes>
@@ -12,4 +13,5 @@ export const ApplicationViews =() => {
 
         
         </Routes></>
+    
 }
