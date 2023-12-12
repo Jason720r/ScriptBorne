@@ -1,19 +1,18 @@
 import { Route, Routes } from "react-router-dom"
-import { Authorized } from "./views/Authorized"
-import { ApplicationViews } from "./views/ApplicationViews"
-import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./ApplicationViews.js"
+import { NavBar } from "./components/NavBar.js"
+
+
 
 export const ScriptBorne = () => {
     return <Routes>
-        <Route path="/home" element={<Home />} />
 
         <Route path="*" element={
-            <Authorized>
                 <>
                 <NavBar />
                 <ApplicationViews />
                 </>
-            </Authorized>
+           
         } />
     </Routes>
 }

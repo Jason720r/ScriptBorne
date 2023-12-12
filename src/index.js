@@ -1,13 +1,12 @@
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import { ScriptBorne } from "./ScriptBorne.js";
 
-import { createRoot } from "react-dom/client"
-import "./index.css"
-import { BrowserRouter } from "react-router-dom"
-import { Home } from "./components/ScriptHome.js"
-
-const container = document.getElementById("root")
-const root = createRoot(container)
+const container = document.getElementById("root");
+const root = createRoot(container);
 root.render(
-    <BrowserRouter>
-        <Home />
-    </BrowserRouter>
-)
+  <BrowserRouter>
+    <ScriptBorne /> 
+  </BrowserRouter>
+);
