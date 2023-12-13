@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Main.css"
  
 export const Franklin = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
@@ -11,9 +12,8 @@ export const Franklin = () => {
     return (
       <>
       <div className="main_container">
-        <div className="main_view" >Weapons</div>
         <img 
-        src="images/scriptborne_shrine.png" 
+        src="https://i.pinimg.com/originals/20/0a/0a/200a0aec714b5d76123e05d367f9ec9e.jpg" 
         alt="shrine"
         className="script_shrine">
           

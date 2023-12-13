@@ -1,0 +1,7 @@
+.main_container {
+    background-image: url('https://i.pinimg.com/originals/20/0a/0a/200a0aec714b5d76123e05d367f9ec9e.jpg');
+    background-size: cover; /* Adjust background size as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background image fixed */
+  }
+  

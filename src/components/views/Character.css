@@ -67,3 +67,17 @@
     font-style:normal;
     font-size: 45px;
 }
+
+.player_lore {
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Final_Fantasy_VII.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Final_Fantasy_VII.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Final_Fantasy_VII.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Final_Fantasy_VII.svg#FinalFantasyVII") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    border: 3px solid rgb(8, 0, 255);
+    padding: 15px;
+    color: #ffffff;
+    font-size: 30px;
+}
