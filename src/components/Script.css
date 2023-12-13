@@ -56,6 +56,11 @@
     max-width: 50%;
     overflow-y: auto;
   }
+
+  .image_container {
+    max-width: 440px; /* Adjust the maximum width as needed to make the image smaller */
+    margin: 0 auto; /* Center the image within the container horizontally */
+  }
   
   /* CSS for the pop-up image */
   .popup_image {
