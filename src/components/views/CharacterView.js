@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Character.css"
 
 
 export const CharacterInfo = () => {
@@ -23,7 +24,7 @@ export const CharacterInfo = () => {
     return (
         <>
         <div className="player_container">
-            <div className="player_view">Characters</div>
+            {/* <div className="player_view">Characters</div>
             <div className="image_container">
             <img
               src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjYiLCJIYWlyTG93ZXIiOiI0IiwiQ2FwZUJhY2siOiIxIiwiRXllcyI6IjI0IiwiU29ja3MiOiI0IiwiU2hvZXMiOiIyIiwiR2xvdmVzIjoiNiIsIlBhbnRzIjoiMSIsIlRvcCI6IjEzIiwiQ2FwZSI6IjQiLCJIYWlyIjoiNSIsInNraW5Ub25lIjoiY2ZiOGE5IiwiZXllc1RvbmUiOiJhNjI4NDEiLCJoYWlyVG9uZSI6IjZlMWExYSIsInBhbnRzVG9uZSI6IjA5MWEyMyIsInRvcFRvbmUiOiI0YjVhYTQiLCJ3aW5nc1RvbmUiOiI0YjVhYTQiLCJ3aW5nc1RvbmUyIjoiNmUxYTFhIiwic2hvZXNUb25lIjoiYjliOWI5IiwiaGF0VG9uZSI6Ijc3Mjg4MiIsImNhcGVUb25lIjoiNWYyYTgyIn0=/1/show.png"
@@ -55,12 +56,14 @@ export const CharacterInfo = () => {
               alt="Granola"
               className="Nola"
             />
-            </div>
+            </div> */}
+            <div className="character_container">
             {characters.map((character) => (
                 <div key={character.id}>
                     <p className="player_title">{character.name}</p>
                     <p className="player_type">{character.type}</p>
                     <p className="player_morality">{character.morality}</p>
+                    <img src={character.image} alt="player" className="player_image" />
                     <button
                         onClick={() => toggleExpanded(character.id)}
                         className="toggle_button"
@@ -73,6 +76,7 @@ export const CharacterInfo = () => {
 
                     </div>
             ))}
+            </div>
              </div></>
              
     )

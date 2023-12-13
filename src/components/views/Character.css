@@ -1,0 +1,13 @@
+/* CSS for character container */
+.character_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum and maximum width as needed */
+    gap: 20px; /* Adjust the gap between cards */
+  }
+  
+  /* CSS for character card */
+  .character_card {
+    border: 1px solid #ccc; /* Add borders or styling to the card */
+    padding: 20px;
+  }
+  
