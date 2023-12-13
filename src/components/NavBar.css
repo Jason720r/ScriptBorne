@@ -4,17 +4,21 @@
     justify-content: flex-end; 
     align-items: center; 
     padding-right: 700px;
+
 }
 
 .navbar {
     list-style: none;
     display: flex; 
     margin: 0;
-    padding: 0;
+    padding: 10;
 }
 
 .navbar__item {
     margin-right: 20px; 
 }
 
+.home_nav, .main_nav, .player_nav, .about_nav {
+    font-size: 20px;
+}
 

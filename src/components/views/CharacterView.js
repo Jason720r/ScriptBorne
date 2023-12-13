@@ -59,16 +59,17 @@ export const CharacterInfo = () => {
             </div> */}
             <div className="character_container">
             {characters.map((character) => (
-                <div key={character.id}>
+                <div key={character.id} className="player_container">
                     <p className="player_title">{character.name}</p>
                     <p className="player_type">{character.type}</p>
                     <p className="player_morality">{character.morality}</p>
                     <img src={character.image} alt="image" className="player_image" />
+                    <p>  </p>
                     <button
                         onClick={() => toggleExpanded(character.id)}
-                        className="toggle_button"
+                        className="player_button"
                     >
-                            {expanded[character.id] ? "Hide Lore" : "Show Lore"}
+                            {expanded[character.id] ? "Hide Lore" : "Lore"}
                     </button>
                         {expanded[character.id] && (
                         <p className="player_lore">{character.lore}</p>
