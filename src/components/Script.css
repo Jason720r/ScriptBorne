@@ -52,12 +52,21 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for a card-like effect */
+    max-height: 50%; /* Set a maximum height for the pop-up content */
+    max-width: 50%;
+    overflow-y: auto;
+  }
+
+  .image_container {
+    max-width: 440px; /* Adjust the maximum width as needed to make the image smaller */
+    margin: 0 auto; /* Center the image within the container horizontally */
   }
   
   /* CSS for the pop-up image */
   .popup_image {
-    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    max-width: 60%; /* Ensure the image doesn't exceed the container's width */
     height: auto;
+    width: 30%;
   }
   
 
