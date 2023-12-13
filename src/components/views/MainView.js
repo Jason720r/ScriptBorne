@@ -9,12 +9,17 @@ export const Franklin = () => {
 
   
     return (
-        <>
-          <div className="main_container">
-            <div className="main_view">Weapons</div>
-        
-          </div>
-          {/* Render the pop-up if isPopupOpen is true */}
+      <>
+      <div className="main_container">
+        <div className="main_view" >Weapons</div>
+        <img 
+        src="images/scriptborne_shrine.png" 
+        alt="shrine"
+        className="script_shrine">
+          
+        </img>
+      </div>
+      {/* Render the pop-up if isPopupOpen is true */}
       {isPopupOpen && (
         <div className="popup_container">
           <div className="popup_content">
@@ -32,6 +37,7 @@ export const Franklin = () => {
           </div>
         </div>
       )}
-        </>
+    </>
+    
     );
 }
