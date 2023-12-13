@@ -63,7 +63,7 @@ export const CharacterInfo = () => {
                     <p className="player_title">{character.name}</p>
                     <p className="player_type">{character.type}</p>
                     <p className="player_morality">{character.morality}</p>
-                    <img src={character.image} alt="player" className="player_image" />
+                    <img src={character.image} alt="image" className="player_image" />
                     <button
                         onClick={() => toggleExpanded(character.id)}
                         className="toggle_button"
