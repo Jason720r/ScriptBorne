@@ -25,6 +25,9 @@
         url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
     font-weight:normal;
     font-style:normal;
+    border: 3px solid gold;
+    padding: 15px;
+    color: #ffffff;
   }
 
   .player_type {
@@ -35,6 +38,8 @@
         url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
     font-weight:normal;
     font-style:normal;
+    padding: 8px;
+    color: burlywood;
   }
 
   .player_morality {
@@ -45,4 +50,20 @@
         url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
     font-weight:normal;
     font-style:normal;
+    padding: 8px;
+    color: rgb(57, 46, 152);
   }
+  .player_image {
+    width: 130px; /* Set the width to your desired size */
+    height: auto; /* Auto-adjust the height to maintain aspect ratio */
+}
+.player_button {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-size: 45px;
+}
