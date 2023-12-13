@@ -11,6 +11,11 @@
     border: 1px solid #ca4747; /* Add borders or styling to the card */
     padding: 20px;
   }
+
+  .player_container {
+    border: 1px solid white;
+    padding: 10px;
+  }
   
   .player_title {
     font-family:"Pixel Cyr Normal";
