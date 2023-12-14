@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css"
- 
+ import JasonImage from './Popup.png';
+
+
 export const Franklin = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
 
@@ -13,7 +15,7 @@ export const Franklin = () => {
       <>
       <div className="main_container">
         <img 
-        src="https://i.pinimg.com/originals/20/0a/0a/200a0aec714b5d76123e05d367f9ec9e.jpg" 
+        src="https://img.freepik.com/free-vector/pixel-art-vacation-background_52683-86708.jpg?w=1800&t=st=1702575594~exp=1702576194~hmac=4337c2a9f107a7bc40a832284190d5bbe6fe61e012c261e00ce063b31a50685f" 
         alt="shrine"
         className="script_shrine">
           
@@ -21,21 +23,23 @@ export const Franklin = () => {
       </div>
       {/* Render the pop-up if isPopupOpen is true */}
       {isPopupOpen && (
+
         <div className="popup_container">
           <div className="popup_content">
-            <button onClick={handleClosePopup} className="close_button">
-              Continue
-            </button>
             {/* Image */}
             <img
-              src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjIiLCJFeWVzIjoiMjYiLCJNb3V0aCI6IjQiLCJTaG9lcyI6IjEiLCJQYW50cyI6IjIiLCJUb3AiOiIxMyIsIkJlbHQiOiIxIiwiSGFpciI6IjE2Iiwic2tpblRvbmUiOiJmM2IwODQiLCJoYWlyVG9uZSI6Ijc4MzkzYiIsInRvcFRvbmUiOiIwMDAwMDAiLCJzaG9lc1RvbmUiOiJlZWVlZWUiLCJjYXBlVG9uZSI6IjFlMTU1MSJ9/1/show.png"
+              src={JasonImage}
               alt="Popup Image"
               className="popup_image"
             />
             {/* Text */}
-            <p>Hey mane, welcome to Lulu Le-I mean Brandtrun, what kind of place is Brandtrun? Idk man but I gotta eat so see you later</p>
+            <p className="pop_text">Hey mane, welcome to Lulu Le-I mean Brandtrun, what kind of place is Brandtrun? Idk man but I gotta eat so see you later</p>
+            <button onClick={handleClosePopup} className="close_button">
+              Continue
+            </button>
+            </div>
           </div>
-        </div>
+        
       )}
     </>
     
