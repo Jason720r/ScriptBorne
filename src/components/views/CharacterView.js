@@ -24,6 +24,11 @@ export const CharacterInfo = () => {
     return (
         <>
         <div className="player_container">
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/268px-Playstation_logo_colour.svg.png"
+        alt="PlayStation Logo"
+        className="top_right_image"
+    />
             {/* <div className="player_view">Characters</div>
             <div className="image_container">
             <img
