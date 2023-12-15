@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css"
  import JasonImage from './Popup.png';
+ import ShrineImage from './Shrine.png';
 
 
 export const Franklin = () => {
@@ -20,11 +21,23 @@ export const Franklin = () => {
         className="top_right_image"
     />
         <img 
-        src="https://img.freepik.com/free-vector/pixel-art-vacation-background_52683-86708.jpg?w=1800&t=st=1702575594~exp=1702576194~hmac=4337c2a9f107a7bc40a832284190d5bbe6fe61e012c261e00ce063b31a50685f" 
+        src={ShrineImage} 
         alt="shrine"
         className="script_shrine">
           
         </img>
+
+        <img 
+        src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjciLCJCb2R5IjoiMyIsIkV5ZXMiOiIxNyIsIk1vdXRoIjoiMTQiLCJTaG9lcyI6IjEiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiMTMiLCJOZWNrIjoiMyIsIkhhaXIiOiIzMSIsInNraW5Ub25lIjoiZjRkNWMxIiwiZXllc1RvbmUiOiI0ZDdjMWUiLCJoYWlyVG9uZSI6ImYwZWY5MyIsInRvcFRvbmUiOiJmZmViYWIiLCJzaG9lc1RvbmUiOiJlZGVkZWQiLCJjYXBlVG9uZSI6IjUxMTUxNSIsImNhcGVUb25lMiI6ImVjMjQyNCJ9/1/show.png"
+        alt="Granola"
+        className="npc_one"
+        />
+        <img 
+        src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png"
+        alt="BatBrahm"
+        className="npc_two"
+        >
+          </img>
       </div>
       {/* Render the pop-up if isPopupOpen is true */}
       {isPopupOpen && (
