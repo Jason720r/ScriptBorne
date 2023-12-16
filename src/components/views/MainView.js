@@ -14,8 +14,19 @@ export const Franklin = () => {
   }
 
   const handleInteraction = () => {
-    setInteraction(false);
+    setInteraction(true);
   }
+
+  const handleOption1 = () => {
+    // Update the content in the popup based on Option 1
+    // You can change the text or image as needed
+  };
+  
+  const handleOption2 = () => {
+    // Update the content in the popup based on Option 2
+    // You can change the text or image as needed
+  };
+  
 
   
     return (
@@ -52,6 +63,9 @@ export const Franklin = () => {
         >
         </img>
       </div>
+      <button onClick={handleInteraction} className="interact_button">
+        Interact
+      </button>
       {/* Render the pop-up if isPopupOpen is true */}
       {isPopupOpen && (
 
@@ -65,6 +79,13 @@ export const Franklin = () => {
             />
             {/* Text */}
             <p className="pop_text">Hello there traveler, welcome to the camp, feel free to introduce yourself to the others before beginning your harrowing journey!</p>
+
+            <div className="dialogue_options">
+              <button onClick={handleOption1}>Option 1</button>
+              <button onClick={handleOption2}>Option 2</button>
+
+            </div>
+
             <button onClick={handleClosePopup} className="close_button">
               Continue
             </button>
