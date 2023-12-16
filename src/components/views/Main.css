@@ -14,7 +14,6 @@
   }
   .npc_one {
     position: absolute;
-    /* Adjust the positioning of npc_1 and npc_2 within the script_shrine image */
     top: 50%;
     left: 50%;
     transform: translate(90%, 80%);
@@ -23,13 +22,19 @@
 
   .npc_two {
     position: absolute;
-    /* Adjust the positioning of npc_1 and npc_2 within the script_shrine image */
     top: 50%;
     left: 50%;
     transform: translate(-180%, 80%);
     width: 14%;
   }
-    
+  
+  .npc_three {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, 80%);
+    width: 14%;
+  }
   
 
 
