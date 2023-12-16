@@ -7,9 +7,14 @@ import "./Main.css"
 
 export const Franklin = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
+  const [interaction, setInteraction] = useState([]);
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
+  }
+
+  const handleInteraction = () => {
+    setInteraction(false);
   }
 
   
