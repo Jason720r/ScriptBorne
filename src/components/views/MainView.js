@@ -15,16 +15,21 @@ export const Franklin = () => {
 
   const handleInteraction = () => {
     setInteraction(true);
+
   }
 
   const handleOption1 = () => {
     // Update the content in the popup based on Option 1
     // You can change the text or image as needed
+    handleClosePopup();
+
   };
   
   const handleOption2 = () => {
     // Update the content in the popup based on Option 2
     // You can change the text or image as needed
+    handleClosePopup();
+
   };
   
 
@@ -81,8 +86,8 @@ export const Franklin = () => {
             <p className="pop_text">Hello there traveler, welcome to the camp, feel free to introduce yourself to the others before beginning your harrowing journey!</p>
 
             <div className="dialogue_options">
-              <button onClick={handleOption1}>Option 1</button>
-              <button onClick={handleOption2}>Option 2</button>
+              <button onClick={handleOption1}>Nice</button>
+              <button onClick={handleOption2}>Nice 2</button>
 
             </div>
 
