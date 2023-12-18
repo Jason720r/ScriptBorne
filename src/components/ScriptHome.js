@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"
-import "./Script.css"
+import { useNavigate } from "react-router-dom";
+import "./Script.css";
+import HomeVideo from './Home.mp4';
 
 
 export const Home = () => {
@@ -21,11 +22,10 @@ export const Home = () => {
         <>
         <div className="home_container">
             <p></p>
-            <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/268px-Playstation_logo_colour.svg.png"
-        alt="PlayStation Logo"
-        className="top_right_image"
-    />
+            <video autoPlay loop muted className="home_background">
+            <source src={HomeVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
             <p></p>
             <div className="fire_gif">
             </div>

@@ -3,6 +3,7 @@ import "./Main.css"
  import JasonImage from './Popup.png';
  import ShrineImage from './Shrine.png';
  import BatBrahm from './BatBrahm.png'
+ import ShrineVideo from './ShrineVideo.mp4';
 
 
 export const Franklin = () => {
@@ -39,11 +40,18 @@ export const Franklin = () => {
     return (
       <>
         <div className="main_container">
+
+
           {/* ... (your NPC images) */}
-          <img
-            src={ShrineImage}
-            alt="shrine"
-            className="script_shrine"
+          <video autoPlay loop muted className="script_shrine">
+            <source src={ShrineVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+           <img
+            src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjciLCJCb2R5IjoiMyIsIkV5ZXMiOiIxNyIsIk1vdXRoIjoiMTQiLCJTaG9lcyI6IjEiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiMTMiLCJOZWNrIjoiMyIsIkhhaXIiOiIzMSIsInNraW5Ub25lIjoiZjRkNWMxIiwiZXllc1RvbmUiOiI0ZDdjMWUiLCJoYWlyVG9uZSI6ImYwZWY5MyIsInRvcFRvbmUiOiJmZmViYWIiLCJzaG9lc1RvbmUiOiJlZGVkZWQiLCJjYXBlVG9uZSI6IjUxMTUxNSIsImNhcGVUb25lMiI6ImVjMjQyNCJ9/1/show.png"
+            alt="Nola Granola"
+            className="npc_one"
+            onClick={() => handleInteraction("Nola Granola")}
           />
           <img 
             src={BatBrahm}
