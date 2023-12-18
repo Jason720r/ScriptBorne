@@ -36,6 +36,22 @@
     width: 14%;
   }
   
+  .interact_button {
+    position: absolute;
+    top: 70%; /* Adjust the top position as needed */
+    left: 85%;
+    transform: translateX(-50%);
+    background-color: #330f88;
+    color: #fff;
+    border: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Play";
+    /* Add font source definitions here */
+    font-weight: normal;
+    font-style: normal;
+  }
 
 
   .popup_container {
@@ -90,7 +106,7 @@
     transform: translateX(-50%);
   }
   
-  .close_button {
+  .dialogue_button {
     display: block;
     margin-top: 10px;
     justify-content: center;
