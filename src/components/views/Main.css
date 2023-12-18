@@ -41,16 +41,18 @@
     top: 70%; /* Adjust the top position as needed */
     left: 85%;
     transform: translateX(-50%);
-    background-color: #330f88;
     color: #fff;
     border: none;
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 4px;
+    padding: 15px 10px; /* Adjust padding as needed */
+    border-radius: 0px;
     cursor: pointer;
-    font-family: "Play";
-    /* Add font source definitions here */
-    font-weight: normal;
-    font-style: normal;
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    font-size: 40px;
+    background-color: rgba(169, 153, 153, 0.594);
+    color: rgb(255, 255, 255);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    line-height: 20px;
   }
 
 
