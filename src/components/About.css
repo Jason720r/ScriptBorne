@@ -1,0 +1,66 @@
+.about_container {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: space-between; /* Space out the children */
+    flex-wrap: wrap;
+}
+
+.about_text {
+    flex: 1; /* Allows the text to fill the available space */
+    padding-right: 20px; /* Optional padding for spacing */
+    margin: 20px;
+}
+
+.about_image {
+    max-width: 900px; /* Adjust as needed */
+    height: auto;
+    align-self: start; /* Align the image to the top */
+    width: 20%;
+}
+.about_title {
+    font-family:"Play";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.svg#Play") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    margin: 30px;
+    border: 10px;
+    border-color: aqua;
+}
+
+.about_info {
+    font-family:"Play";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.svg#Play") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    margin: 20px;
+}
+
+.about_two {
+    font-family:"Play";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.svg#Play") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    margin: 30px;
+}
+
+/* Optional: Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .about_container {
+        flex-direction: column;
+    }
+
+    .about_image {
+        order: -1; /* Puts the image on top */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
