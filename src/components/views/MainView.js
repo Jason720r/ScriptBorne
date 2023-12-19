@@ -4,6 +4,7 @@ import "./Main.css"
  import ShrineImage from './Shrine.png';
  import BatBrahm from './BatBrahm.png'
  import ShrineVideo from './ShrineVideo.mp4';
+ import BurgerQueen from './Burger.png';
 
 
 export const Franklin = () => {
@@ -53,12 +54,12 @@ export const Franklin = () => {
             className="npc_one"
             onClick={() => handleInteraction("Nola Granola")}
           />
-          <img 
+          {/* <img 
             src={BatBrahm}
             alt="BatBrahm"
             className="npc_two"
             onClick={() => handleInteraction("BatBrahm")}
-          />
+          /> */}
           <img
             src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjIiLCJCb2R5IjoiMSIsIkV5ZXMiOiIyOCIsIlNvY2tzIjoiMSIsIkdsb3ZlcyI6IjQiLCJQYW50cyI6IjUiLCJUb3AiOiIxNiIsIkNhcGUiOiI1IiwiSGFpciI6IjQiLCJHbGFzc2VzIjoiMTAiLCJoYWlyVG9uZSI6ImY0ODliNiIsInBhbnRzVG9uZSI6ImVmMmYwMCIsInRvcFRvbmUiOiJlZjJmMDAiLCJzb2Nrc1RvbmUiOiJlZjJmMDAiLCJnbG92ZXNUb25lIjoiNDk2MmY5IiwiZ2xvdmVzVG9uZTIiOiI0OTYyZjkiLCJjYXBlVG9uZSI6IjQ5NjJmOSJ9/1/show.png"
             alt="Burger Queen"
@@ -75,11 +76,11 @@ export const Franklin = () => {
           <div className="popup_container">
             <div className="popup_content">
               <img
-                src={JasonImage}
+                src={BurgerQueen}
                 alt="Popup Image"
                 className="popup_image"
               />
-              <p className="pop_text">Hello there traveler, welcome to the camp, feel free to introduce yourself to the others before beginning your harrowing journey!</p>
+              <p className="pop_text">Everybody wish a Happy Birthday to the Burger Queen! Happy 21 Crime Fighter!</p>
   
               <div className="dialogue_options">
                 {interaction === "start" && (
@@ -99,7 +100,7 @@ export const Franklin = () => {
 
               {interaction !== "option1" && interaction !== "option2" && (
                 <button onClick={handleClosePopup} className="close_button">
-                  Continue
+                  Happy Birthday :D
                 </button>
               )}
             </div>

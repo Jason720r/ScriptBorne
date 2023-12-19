@@ -65,12 +65,12 @@
     top: 50%; /* Adjust vertically as needed */
     left: 50%; /* Adjust horizontally as needed */
     right: 200%;
-    transform: translate(70%, 10%);
-    background-color: #120e0e;
+    transform: translate(35%, 10%);
+    background-color: #e3d6d6;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    max-width: 550px; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
     max-height: 500px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
@@ -78,14 +78,14 @@
   .popup_content {
     position: relative;
     border-style: solid;
-    border-width: 10px;
+    border-width: 60px;
     border-color: transparent transparent #0f0b0b transparent;
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
   
   .popup_image {
     max-width: 100%;
-    max-height: 90%; /* Adjust the maximum height as needed */
+    max-height: 100%;
     width: auto;
     height: auto;
     display: block;
@@ -96,7 +96,7 @@
     font-size: 16px;
     line-height: 1.5;
     margin-top: 10px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
   }
   
   .popup_content p::before {
@@ -131,8 +131,28 @@
     font-style:normal;
   }
   
+  .close_button {
+    display: block;
+    margin-top: 15px;
+    justify-content: center;
+    background-color: #330f88;
+    color: #fff;
+    border: none;
+    padding: 10px 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:"Play";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.svg#Play") format("svg");
+    font-weight:normal;
+    font-style:normal;
+  }
+
   .close_button:hover {
     background-color: #0056b3;
+    
   }
 
   .pop_text {

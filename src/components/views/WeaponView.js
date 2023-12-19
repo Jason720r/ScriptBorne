@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Weapon.css"
 
 export const WeaponInfo = () => {
     const [weapons, setWeapon] = useState([]);
@@ -17,8 +18,8 @@ export const WeaponInfo = () => {
     return (
         <>
           <div className="weapon_container">
+          <div className="weapon_view">Weapons</div>
             <div className="individual_container">
-            <div className="weapon_view">Weapons</div>
             {weapons.map((weapon) => (
               <div key={weapon.id}>
                 <p className="weapon_title">{weapon.name}</p>

@@ -31,7 +31,7 @@
     font-weight:normal;
     font-style:normal;
     padding: 8px;
-    color: burlywood;
+    color: rgb(230, 230, 35);
 }
 
 .weapon_image {
@@ -44,4 +44,18 @@
     font-style:normal;
     padding: 8px;
     color: burlywood;
+}
+
+.weapon_view {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    border: 3px solid rgb(17, 0, 255);
+    padding: 15px;
+     margin: 10px;
+    color: #ffffff;
 }
