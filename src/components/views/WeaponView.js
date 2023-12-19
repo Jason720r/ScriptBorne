@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export const WeaponInfo = () => {
-    const [weapons, setWeapons] = useState([]);
+    const [weapons, setWeapon] = useState([]);
 
 
 
