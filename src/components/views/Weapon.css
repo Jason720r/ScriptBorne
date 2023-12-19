@@ -1,0 +1,47 @@
+.weapon_container {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.individual_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum and maximum width as needed */
+    gap: 20px; /* Adjust the gap between cards */
+}
+
+.weapon_title {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    border: 3px solid gold;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.weapon_damage {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    padding: 8px;
+    color: burlywood;
+}
+
+.weapon_image {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    padding: 8px;
+    color: burlywood;
+}

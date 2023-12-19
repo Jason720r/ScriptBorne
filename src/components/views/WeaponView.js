@@ -17,12 +17,17 @@ export const WeaponInfo = () => {
     return (
         <>
           <div className="weapon_container">
+            <div className="individual_container">
             <div className="weapon_view">Weapons</div>
             {weapons.map((weapon) => (
               <div key={weapon.id}>
                 <p className="weapon_title">{weapon.name}</p>
+                <p className="weapon_damage">{weapon.damage}</p>
+                <p className="weapon_image">{weapon.image}</p>
+
               </div>
             ))}
+            </div>
           </div>
         </>
       );
