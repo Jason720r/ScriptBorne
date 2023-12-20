@@ -11,27 +11,30 @@ export const Franklin = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
   const [interaction, setInteraction] = useState([]);
   const [currentNPC, setCurrentNPC] = useState(null);
+  const [popupData, setPopupData] = useState({
+    isOpen: false,
+    npcName: null,
+    interaction: null,
+  })
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
     setInteraction(null);
   }
 
-  const handleInteraction = () => {
+  const handleInteraction = (npcName) => {
     setIsPopupOpen(true);
-    setInteraction(true);
+    setInteraction("start");
+    setCurrentNPC(npcName)
   }
 
   const handleOption1 = () => {
-    // Update the content in the popup based on Option 1
-    // You can change the text or image as needed
     handleClosePopup();
 
   };
   
   const handleOption2 = () => {
-    // Update the content in the popup based on Option 2
-    // You can change the text or image as needed
+
     handleClosePopup();
 
   };
@@ -43,7 +46,6 @@ export const Franklin = () => {
         <div className="main_container">
 
 
-          {/* ... (your NPC images) */}
           <video autoPlay loop muted className="script_shrine">
             <source src={ShrineVideo} type="video/mp4" />
             Your browser does not support the video tag.
@@ -54,12 +56,6 @@ export const Franklin = () => {
             className="npc_one"
             onClick={() => handleInteraction("Nola Granola")}
           />
-          {/* <img 
-            src={BatBrahm}
-            alt="BatBrahm"
-            className="npc_two"
-            onClick={() => handleInteraction("BatBrahm")}
-          /> */}
           <img
             src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjIiLCJCb2R5IjoiMSIsIkV5ZXMiOiIyOCIsIlNvY2tzIjoiMSIsIkdsb3ZlcyI6IjQiLCJQYW50cyI6IjUiLCJUb3AiOiIxNiIsIkNhcGUiOiI1IiwiSGFpciI6IjQiLCJHbGFzc2VzIjoiMTAiLCJoYWlyVG9uZSI6ImY0ODliNiIsInBhbnRzVG9uZSI6ImVmMmYwMCIsInRvcFRvbmUiOiJlZjJmMDAiLCJzb2Nrc1RvbmUiOiJlZjJmMDAiLCJnbG92ZXNUb25lIjoiNDk2MmY5IiwiZ2xvdmVzVG9uZTIiOiI0OTYyZjkiLCJjYXBlVG9uZSI6IjQ5NjJmOSJ9/1/show.png"
             alt="Burger Queen"
@@ -76,31 +72,31 @@ export const Franklin = () => {
           <div className="popup_container">
             <div className="popup_content">
               <img
-                src={BurgerQueen}
+                src={JasonImage}
                 alt="Popup Image"
                 className="popup_image"
               />
-              <p className="pop_text">Everybody wish a Happy Birthday to the Burger Queen! Happy 21 Crime Fighter!</p>
+              <p className="pop_text">Greetings!</p>
   
               <div className="dialogue_options">
                 {interaction === "start" && (
                   <>
                 <button onClick={handleOption1} className="dialogue_button">Ok, Thanks!</button>
-                <button onClick={handleOption2} className="dialogue_button">FUck you.</button>
+                <button onClick={handleOption2} className="dialogue_button">Sure maneee.</button>
                 </>
                 )}
 
-                {interaction == "option1" && (
-                  <p>Option 1 selected</p>
+                {popupData.interaction == "option1" && (
+                  <p>Option 1 selected for {popupData.npcName}</p>
                 )}
-                 {interaction == "option2" && (
-                  <p>Option 2 selected</p>
+                 {popupData.interaction == "option2" && (
+                  <p>Option 2 selected for {popupData.npcName}</p>
                 )}
               </div>
 
-              {interaction !== "option1" && interaction !== "option2" && (
+              {popupData.interaction !== "option1" && popupData.interaction !== "option2" && (
                 <button onClick={handleClosePopup} className="close_button">
-                  Happy Birthday :D
+                  Close {popupData.npcName}'s Pop-up'
                 </button>
               )}
             </div>
