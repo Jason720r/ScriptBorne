@@ -23,7 +23,7 @@ export const WeaponInfo = () => {
             {weapons.map((weapon) => (
               <div key={weapon.id}>
                 <p className="weapon_title">{weapon.name}</p>
-                <p className="weapon_damage">{weapon.damage}</p>
+                <p className="weapon_damage">Damage:{weapon.damage}</p>
                 <p className="weapon_image">{weapon.image}</p>
 
               </div>
