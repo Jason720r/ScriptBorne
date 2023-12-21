@@ -59,6 +59,25 @@
     line-height: 20px;
   }
 
+  .interact_nola {
+    position: absolute;
+    top: 70%; /* Adjust the top position as needed */
+    left: 77%;
+    transform: translate(-180%, -50%);
+    color: #fff;
+    border: none;
+    padding: 15px 10px; /* Adjust padding as needed */
+    border-radius: 0px;
+    cursor: pointer;
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    font-size: 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    line-height: 20px;
+  }
+
   .interact_jason {
     position: absolute;
     top: 70%; /* Adjust the top position as needed */
