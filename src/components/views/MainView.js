@@ -7,6 +7,7 @@ import "./Main.css"
  import BatBrahm from './BatBrahm.png'
  import ShrineVideo from './ShrineVideo.mp4';
  import BurgerQueen from './Burger.png';
+ import Brahm from './Charlemagne.png';
 
 
 
@@ -16,7 +17,9 @@ export const Franklin = () => {
   const [nolaPopupOpen, setNolaPopupOpen] = useState(false);
   const [jasonInteraction, setJasonInteraction] = useState("start");
   const [burgerQueenInteraction, setBurgerQueenInteraction] = useState("start");
-  const [NolaInteraction, setNolaInteraction] = useState("start");
+  const [nolaInteraction, setNolaInteraction] = useState("start");
+  const [brahmPopupOpen, setBrahmPopupOpen] = useState(false)
+  const [brahmInteraction, setBrahmInteraction] = useState(false)
   const [interaction, setInteraction] = useState([]);
   const [currentNPC, setCurrentNPC] = useState(null);
   const [popupData, setPopupData] = useState({
@@ -37,6 +40,10 @@ export const Franklin = () => {
     setNolaPopupOpen(false);
   }
 
+  const handleCloseBrahmPopup = () => {
+    setBrahmPopupOpen(false);
+}
+
   const handleInteractionJason = () => {
     setJasonPopupOpen(true);
     setJasonInteraction("start");
@@ -50,6 +57,11 @@ export const Franklin = () => {
   const handleInteractionNola = () => {
     setNolaPopupOpen(true);
     setNolaInteraction("start")
+  }
+  
+  const handleInteractionBrahm = () => {
+    setBrahmPopupOpen(true);
+    setBrahmInteraction("start")
   }
 
   const handleOption1 = () => {
@@ -69,6 +81,9 @@ export const Franklin = () => {
 
   };
   
+//   const handleOptionBrahm = () => {
+//     handleCloseBrahmPopup();
+// };
 
   
     return (
@@ -98,6 +113,13 @@ export const Franklin = () => {
             className="npc_three"
             onClick={() => handleInteractionBurgerQueen("Burger Queen")}
           />
+
+<img
+            src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png"
+            alt="Brahm"
+            className="npc_four"
+            onClick={() => handleInteractionBrahm("Brahm")}
+          />
           <button onClick={handleInteractionJason} className="interact_jason">
             Jason
           </button>
@@ -111,6 +133,10 @@ export const Franklin = () => {
 
         <button onClick={ handleInteractionNola} className="interact_nola">
           Nola Granola
+        </button>
+
+        <button onClick={ handleInteractionBrahm} className="interact_brahm">
+          Charlemagne of Thad Castle
         </button>
         </div>
   
@@ -147,7 +173,7 @@ export const Franklin = () => {
               <p className="pop_text">Sup</p>
   
               <div className="dialogue_options">
-                {jasonInteraction === "start" && (
+                {nolaInteraction === "start" && (
                   <>
                 <button onClick={handleOption3} className="dialogue_button">Uh Hi?</button>
                 <button onClick={handleOption3} className="dialogue_button">Leave</button>
@@ -177,11 +203,32 @@ export const Franklin = () => {
                 </>
                 )}
                 
-
               </div>
             </div>
           </div>
         )}
+          {brahmPopupOpen && (
+          <div className="popup_container">
+            <div className="popup_content">
+              <img
+                src={Brahm}
+                alt="Popup Image"
+                className="popup_image"
+              />
+              <p className="pop_text">What's up PUSSY, nice cock~</p>
+  
+              <div className="dialogue_options">
+                {brahmInteraction === "start" && (
+                  <>
+                <button onClick={handleOptionBrahm} className="dialogue_button">[THREATEN]*heaving cow noise</button>
+                <button onClick={handleOptionBrahm} className="dialogue_button">[INTIMIDATE]*whip cock out</button>
+                <button onClick={handleOptionBrahm} className="dialogue_button">What is wrong with you?</button>
+                </>
+                )}
+                </div>
+              </div>
+            </div>
+                )}
       </>
     );
 }

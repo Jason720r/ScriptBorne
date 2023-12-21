@@ -24,6 +24,13 @@ export const NavBar = () => {
 </Link>
 </li>
 <li className="navbar__item">
+    <Link className="nav-link" to="/stage">
+    <i className="fas fa-edit"></i>
+    <div className="about_nav">Brahm City</div>
+    <span></span>
+</Link>
+</li>
+<li className="navbar__item">
     <Link className="nav-link" to="/players">
     <i className="fas fa-edit"></i>
     <div className="player_nav">Characters</div>

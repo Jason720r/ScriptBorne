@@ -4,6 +4,7 @@ import { CharacterInfo } from "./components/views/CharacterView.js";
 import { AboutUs } from "./components/About.js";
 import { Home } from "./components/ScriptHome.js";
 import { WeaponInfo } from "./components/views/WeaponView.js";
+// import { Stage } from "./components/views/OtherView.js";
 
 
 export const ApplicationViews =() => {
@@ -14,6 +15,7 @@ export const ApplicationViews =() => {
         <Route path="/players" element={<CharacterInfo />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/items" element={<WeaponInfo />} />
+        <Route path="/stage" element={<Stage />} />
         
         </Routes></>
     
