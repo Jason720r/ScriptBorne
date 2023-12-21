@@ -44,8 +44,8 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-100%, 150%);
-    width: 10%;
+    transform: translate(-50%, 140%);
+    width: 16%;
   }
   
   .interact_button {

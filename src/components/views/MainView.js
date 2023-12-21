@@ -81,9 +81,9 @@ export const Franklin = () => {
 
   };
   
-//   const handleOptionBrahm = () => {
-//     handleCloseBrahmPopup();
-// };
+  const handleOptionBrahm = () => {
+    handleCloseBrahmPopup();
+};
 
   
     return (
