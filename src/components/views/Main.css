@@ -28,7 +28,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-420%, -80%);
+    transform: translate(-400%, 120%);
     width: 10%;
   }
   
@@ -52,11 +52,31 @@
     cursor: pointer;
     font-family:"Final Fantasy Script Collection - Final Fantasy VII";
     font-size: 40px;
-    background-color: rgba(169, 153, 153, 0.594);
+    background-color: transparent;
     color: rgb(255, 255, 255);
     font-smooth: never;
     -webkit-font-smoothing : none;
     line-height: 20px;
+  }
+
+  .interact_jason {
+    position: absolute;
+    top: 70%; /* Adjust the top position as needed */
+    left: 77%;
+    transform: translateX(-1270%);
+    color: #fff;
+    border: none;
+    padding: 15px 10px; /* Adjust padding as needed */
+    border-radius: 0px;
+    cursor: pointer;
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    font-size: 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    line-height: 20px;
+
   }
 
 

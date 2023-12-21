@@ -78,8 +78,8 @@ export const Franklin = () => {
             className="npc_three"
             onClick={() => handleInteractionBurgerQueen("Burger Queen")}
           />
-          <button onClick={handleInteractionJason} className="interact_button">
-            Interact
+          <button onClick={handleInteractionJason} className="interact_jason">
+            Jason
           </button>
           <button
           onClick={handleInteractionBurgerQueen}
@@ -100,10 +100,10 @@ export const Franklin = () => {
               <p className="pop_text">Greetings!</p>
   
               <div className="dialogue_options">
-                {interaction === "start" && (
+                {jasonInteraction === "start" && (
                   <>
                 <button onClick={handleOption1} className="dialogue_button">Ok, Thanks!</button>
-                <button onClick={handleOption2} className="dialogue_button">Sure maneee.</button>
+                <button onClick={handleOption1} className="dialogue_button">Sure maneee.</button>
                 </>
                 )}
                 </div>
@@ -120,12 +120,12 @@ export const Franklin = () => {
                 alt="Popup Image"
                 className="popup_image"
               />
-              <p className="pop_text">*Stands menacingly</p>
+              <p className="pop_text">*Stares menacingly</p>
   
               <div className="dialogue_options">
                 {burgerQueenInteraction === "start" && (
                   <>
-                <button onClick={handleOption1} className="dialogue_button">Uhhhh Hi?</button>
+                <button onClick={handleOption2} className="dialogue_button">Uhhhh Hi?</button>
                 <button onClick={handleOption2} className="dialogue_button">Leave</button>
                 </>
                 )}
