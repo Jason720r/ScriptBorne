@@ -26,7 +26,7 @@ export const NavBar = () => {
 <li className="navbar__item">
     <Link className="nav-link" to="/stage">
     <i className="fas fa-edit"></i>
-    <div className="about_nav">Brahm City</div>
+    <div className="about_nav">Thad Castle</div>
     <span></span>
 </Link>
 </li>

@@ -3,7 +3,8 @@ import Brahm from './Charlemagne.png';
 import BatBrahm from './BatBrahm.png';
 import BrahmRoad from '../BrahmRoad.mp4';
 import "./Other.css";
-import Bat from './Bat.png';
+import Dark from './Dark.webp';
+import Face from './Face.webp';
 
 
 export const Stage = () => {
@@ -33,16 +34,16 @@ export const Stage = () => {
           </video> 
 
         <img 
-        src={Bat}
+        src={Dark}
         alt="Brahmbil"
         className="vehicle_one"
         >   
         </img>
 
           <img
-            src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png"
+            src={BatBrahm}
             alt="Brahm"
-            className="npc_four"
+            className="npc_face"
             onClick={() => handleInteractionBrahm("Brahm")}
           />
         <button onClick={ handleInteractionBrahm} className="interact_brahm">

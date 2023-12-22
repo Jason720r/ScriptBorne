@@ -1,0 +1,15 @@
+.vehicle_one {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    width: 16%;
+}
+
+.npc_face {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 1050%);
+    width: 4%;
+}
