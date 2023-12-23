@@ -33,7 +33,7 @@ export const NavBar = () => {
 <li className="navbar__item">
     <Link className="nav-link" to="/city">
     <i className="fas fa-edit"></i>
-    <div className="about_nav">Thad City</div>
+    <div className="about_nav">Brahm City</div>
     <span></span>
 </Link>
 </li>

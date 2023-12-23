@@ -5,28 +5,27 @@ import BrahmRoad from '../BrahmRoad.mp4';
 import "./Other.css";
 import Dark from './Dark.webp';
 import Face from './Face.webp';
+import { useNavigate } from "react-router-dom";
 
 
 export const Stage = () => {
-    const [brahmPopupOpen, setBrahmPopupOpen] = useState(false)
-    const [brahmInteraction, setBrahmInteraction] = useState(false)
+    const [isButtonVisible, setIsButtonVisible] = useState(false);
+
+    const navigate = useNavigate()
+
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsButtonVisible(true);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [])
     
 
-
-
-
-    const handleCloseBrahmPopup = () => {
-        setBrahmPopupOpen(false);
+    const handleBrahmArrival = () => {
+        navigate('/city');
     }
-
-    const handleOptionBrahm = () => {
-        handleCloseBrahmPopup();
-    };
-
-    const handleInteractionBrahm = () => {
-        setBrahmPopupOpen(true);
-        setBrahmInteraction("start")
-      }
 
     return (
         <>
@@ -47,34 +46,14 @@ export const Stage = () => {
             src={BatBrahm}
             alt="Brahm"
             className="npc_face"
-            onClick={() => handleInteractionBrahm("Brahm")}
           />
-        <button onClick={ handleInteractionBrahm} className="interact_brahm">
-          Charlemagne of Thad Castle
-        </button>
+            {isButtonVisible && (
+                    <button onClick={handleBrahmArrival} className="interact_arrival">
+                        ENTER BRAHM CITY
+                    </button>
+                )}
         </div>
-        {brahmPopupOpen && (
-          <div className="popup_container">
-            <div className="popup_content">
-              <img
-                src={Brahm}
-                alt="Popup Image"
-                className="popup_image"
-              />
-              <p className="pop_text">What's up PUSSY, nice cock~</p>
-  
-              <div className="dialogue_options">
-                {brahmInteraction === "start" && (
-                  <>
-                <button onClick={handleOptionBrahm} className="dialogue_button">[THREATEN]*heaving cow noise</button>
-                <button onClick={handleOptionBrahm} className="dialogue_button">[INTIMIDATE]*whip cock out</button>
-                <button onClick={handleOptionBrahm} className="dialogue_button">What is wrong with you?</button>
-                </>
-                )}
-                </div>
-              </div>
-            </div>
-                )}
+
         </>
         
     )

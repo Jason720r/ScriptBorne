@@ -8,7 +8,7 @@ import "./Main.css"
  import ShrineVideo from './ShrineVideo.mp4';
  import BurgerQueen from './Burger.png';
  import Brahm from './Charlemagne.png';
- import { Navigate } from "react-router-dom";
+ import { Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -28,6 +28,8 @@ export const Franklin = () => {
     npcName: null,
     interaction: null,
   })
+
+  const navigate = useNavigate();
 
   const handleCloseJasonPopup = () => {
     setJasonPopupOpen(false);
@@ -85,6 +87,10 @@ export const Franklin = () => {
   const handleOptionBrahm = () => {
     handleCloseBrahmPopup();
 };
+
+const handleBrahmCity = () => {
+  navigate('/stage');
+}
 
   
     return (
@@ -149,13 +155,13 @@ export const Franklin = () => {
                 alt="Popup Image"
                 className="popup_image"
               />
-              <p className="pop_text">Greetings!</p>
+              <p className="pop_text">Wanna go somehwere wacky?</p>
   
               <div className="dialogue_options">
                 {jasonInteraction === "start" && (
                   <>
-                <button onClick={handleOption1} className="dialogue_button">Ok, Thanks!</button>
-                <button onClick={handleOption1} className="dialogue_button">Sure maneee.</button>
+                <button onClick={handleBrahmCity} className="dialogue_button">Brahm City</button>
+                <button onClick={handleOption1} className="dialogue_button">Nah I'm good.</button>
                 </>
                 )}
                 </div>
