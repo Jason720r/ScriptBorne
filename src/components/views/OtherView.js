@@ -13,9 +13,7 @@ export const Stage = () => {
     
 
 
-    const handleCloseJackson = () => {
-        setJacksonPopupOpen(false);
-    }
+
 
     const handleCloseBrahmPopup = () => {
         setBrahmPopupOpen(false);

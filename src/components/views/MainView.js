@@ -8,6 +8,7 @@ import "./Main.css"
  import ShrineVideo from './ShrineVideo.mp4';
  import BurgerQueen from './Burger.png';
  import Brahm from './Charlemagne.png';
+ import { Navigate } from "react-router-dom";
 
 
 
