@@ -10,7 +10,12 @@ import Face from './Face.webp';
 export const Stage = () => {
     const [brahmPopupOpen, setBrahmPopupOpen] = useState(false)
     const [brahmInteraction, setBrahmInteraction] = useState(false)
+    
 
+
+    const handleCloseJackson = () => {
+        setJacksonPopupOpen(false);
+    }
 
     const handleCloseBrahmPopup = () => {
         setBrahmPopupOpen(false);
