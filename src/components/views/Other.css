@@ -22,7 +22,11 @@
         url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Final_Fantasy_VII.svg#FinalFantasyVII") format("svg");
     font-weight:normal;
     font-style:normal;
-    transform: translate(65%, 900%);
-    width: 45%;
-    padding: 17px;
+    transform: translate(75%, 400%);
+    width: 40%;
+    padding: 7px;
+    font-size: 55px;
+    background-color: blueviolet;
+    border: 2px solid gold;
+    color: gold;
 }

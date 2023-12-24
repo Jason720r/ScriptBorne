@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Stage = () => {
     const [isButtonVisible, setIsButtonVisible] = useState(false);
+    const [isButtonInvisible, setIsButtonInvisible] = useState(false);
 
     const navigate = useNavigate()
 
@@ -22,6 +23,13 @@ export const Stage = () => {
         return () => clearTimeout(timer);
     }, [])
     
+    useEffect(() => {
+        const timerInvisible = setTimeout(() => {
+            setIsButtonInvisible(true);
+        }, 3000);
+
+        return () => clearTimeout(timerInvisible);
+    }, []);
 
     const handleBrahmArrival = () => {
         navigate('/city');
