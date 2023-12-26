@@ -35,6 +35,8 @@ export const Stage = () => {
         navigate('/city');
     }
 
+
+
     return (
         <>
             <div className="other_container">
@@ -58,6 +60,11 @@ export const Stage = () => {
             {isButtonVisible && (
                     <button onClick={handleBrahmArrival} className="interact_arrival">
                         ENTER BRAHM CITY
+                    </button>
+                )}
+                {isButtonInvisible ? null : (
+                    <button onClick={handleBrahmArrival} className="second_button">
+                        Another Button
                     </button>
                 )}
         </div>
