@@ -64,7 +64,7 @@ export const Stage = () => {
                 )}
                 {isButtonInvisible ? null : (
                     <button onClick={handleBrahmArrival} className="second_button">
-                        Another Button
+                        LOADING.....
                     </button>
                 )}
         </div>
