@@ -1,0 +1,36 @@
+.script_city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105vh; /* You can adjust the height as needed */
+    background-size: cover; /* Adjust background size as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background image fixed */
+}
+
+.enemy_one {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(90%, 130%);
+    width: 10%;
+}
+
+.interact_enemy {
+    position: absolute;
+    top: 70%; /* Adjust the top position as needed */
+    left: 77%;
+    transform: translateX(-140%);
+    color: #fff;
+    border: none;
+    padding: 15px 10px; /* Adjust padding as needed */
+    border-radius: 0px;
+    cursor: pointer;
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    font-size: 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    line-height: 20px;
+}
