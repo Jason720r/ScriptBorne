@@ -23,6 +23,10 @@ export const BrahmCity = () => {
         setBrahmInteraction("start")
     }
 
+    const handleBattleSection = () => {
+        navigate('/brass');
+    }
+
 
     return (
         <>
@@ -57,7 +61,7 @@ export const BrahmCity = () => {
                     <div className="battle_dialogue">
                         {brahmInteraction === "start" && (
                             <>
-                            <button onClick={handleOptionBrahm} className="battle_start">Challenge Charlemagne of Thad Castle</button>
+                            <button onClick={handleBattleSection} className="battle_start">Challenge Charlemagne of Thad Castle</button>
                             </>
                         )}
                          </div>
