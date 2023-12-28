@@ -52,11 +52,11 @@ export const Stage = () => {
         >   
         </img>
 
-          <img
+          {/* <img
             src={BatBrahm}
             alt="Brahm"
             className="npc_face"
-          />
+          /> */}
             {isButtonVisible && (
                     <button onClick={handleBrahmArrival} className="interact_arrival">
                         ENTER BRAHM CITY
