@@ -42,7 +42,6 @@ export const BrahmCity = () => {
             <button onClick={handleInteractionBrahm} className="interact_enemy">
                 Charlemagne
             </button>
-
         </div>
 
         {brahmPopupOpen && (
