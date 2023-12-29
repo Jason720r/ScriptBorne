@@ -1,11 +1,45 @@
-.battlefield {
+.combat_container {
+    position: relative;
+}
+
+.combat_background {
+    width: 90%;
+    height: 90vh; /* Adjust height as necessary */
+    object-fit: cover; /* Ensures the video covers the entire container */
+    position: absolute;
+    top: 0;
+    left: 70px;
+    z-index: -1; /* Positions the video behind the content */
+}
+
+.battlefield, .actions {
+    position: absolute;
+    width: 90%; /* Adjust width as necessary */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
+.battlefield {
+    top: 30%; /* Adjust the position as necessary */
+}
+
+.actions {
+    bottom: 10%; /* Adjust the position as necessary */
+    flex-direction: column; /* Stack buttons vertically */
+}
+
 .actions button {
-    width: 100px;
+    width: 120px;
     height: 50px;
     margin: 5px;
+    z-index: 1; /* Ensures buttons are clickable and above the video */
+}
+
+.battle_player {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-120%, 130%);
+    width: 20%;
 }

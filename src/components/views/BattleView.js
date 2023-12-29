@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import './Battle.css'
+import BattleStage from './BrahmCombat.mp4';
+
 
 export const BattleTime = () => {
     const [playerHealth, setPlayerHealth] = useState(100);
@@ -18,11 +20,9 @@ export const BattleTime = () => {
     };
 
     const handleEnemyAttack = () => {
-        if (isEnemyTurn) {
-            setPlayerHealth(playerHealth = enemyDamage);
-            setIsEnemyTurn(false)
-        }
-    }
+        setPlayerHealth(prevHealth => prevHealth - enemyDamage);
+    };
+    
 
     const handleDefend = () => {
 
@@ -40,10 +40,18 @@ export const BattleTime = () => {
 
     return (
         <div>
-            <h2>Battle Time</h2>
+            <div className="combat_container">
+                <video autoPlay loop muted className="combat_background">
+                    <source src={BattleStage} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             <div className="battlefield">
-                <img src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiIyMCIsIkV5ZXMiOiI1IiwiUGFudHMiOiIyIiwiSmFja2V0IjoiMyIsIkhhaXIiOiIyMCIsIkhhdCI6IjUiLCJza2luVG9uZSI6ImFhYmNlMCIsInBhbnRzVG9uZSI6IjA5MTgyMSIsImhhdFRvbmUiOiJkODJlMmUifQ==/1/show.png" alt="Player" />
-                <img src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png" alt="Enemy" />
+                <img
+                 src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiIyMCIsIkV5ZXMiOiI1IiwiUGFudHMiOiIyIiwiSmFja2V0IjoiMyIsIkhhaXIiOiIyMCIsIkhhdCI6IjUiLCJza2luVG9uZSI6ImFhYmNlMCIsInBhbnRzVG9uZSI6IjA5MTgyMSIsImhhdFRvbmUiOiJkODJlMmUifQ==/1/show.png" alt="Player" 
+                 className="battle_player"/>
+                <img 
+                src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png" alt="Enemy" 
+                className="brahm_enemy"/>
                 <div>Player Health: {playerHealth}</div>
                 <div>Enemy Health: {enemyHealth}</div>
             </div>
@@ -51,6 +59,7 @@ export const BattleTime = () => {
                 <button onClick={handleAttack}>Attack</button>
                 <button onClick={handleDefend}>Defend</button>
             </div>
+        </div>
         </div>
     );
 }
