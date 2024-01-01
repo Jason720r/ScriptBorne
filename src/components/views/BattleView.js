@@ -11,6 +11,9 @@ export const BattleTime = () => {
     const [enemyDamage, setEnemyDamage] = useState(30)
     const [isPlayerTurn, setIsPlayerTurn] = useState(true);
     const [isEnemyTurn, setIsEnemyTurn] = useState(true)
+    const [healthUses, setHealthUses] = useState(0);
+
+    const navigate = useNavigate()
 
     const handleAttack = () => {
         if (isPlayerTurn) {
@@ -23,6 +26,12 @@ export const BattleTime = () => {
         setPlayerHealth(prevHealth => prevHealth - enemyDamage);
     };
     
+    const handleHealth = () => {
+        if (healthUses < 3) {
+            setPlayerHealth(prevHealth => prevHealth + 10);
+            setHealthUses(prevUses => prevUses + 1);
+        }
+    }
 
     const handleDefend = () => {
 
@@ -36,7 +45,9 @@ export const BattleTime = () => {
         }
     }, [isPlayerTurn, playerHealth, enemyDamage]);
 
-    
+    const handleEscape = () => {
+        navigate('/main');
+    }
 
     return (
         <div>
@@ -56,8 +67,10 @@ export const BattleTime = () => {
                 <div>Enemy Health: {enemyHealth}</div>
             </div>
             <div className="actions">
-                <button onClick={handleAttack}>Attack</button>
-                <button onClick={handleDefend}>Defend</button>
+                <button className="combat_button" onClick={handleAttack}>Attack</button>
+                <button className="combat_button"  onClick={handleDefend}>Defend</button>
+                <button className="combat_button" onClick={handleHealth} disabled={healthUses >= 3}>Restore Health</button>
+                <button className="combat_button" onClick={handleEscape}>Run</button>
             </div>
         </div>
         </div>

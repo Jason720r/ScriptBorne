@@ -14,7 +14,7 @@
 
 .battlefield, .actions {
     position: absolute;
-    width: 90%; /* Adjust width as necessary */
+    width: 70%; /* Adjust width as necessary */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +25,28 @@
 }
 
 .actions {
-    bottom: 10%; /* Adjust the position as necessary */
-    flex-direction: column; /* Stack buttons vertically */
+    bottom: -630px; /* Position it lower */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Two columns */
+    grid-gap: 10px;
+    border: 6px solid rgb(255, 255, 255); /* Add a border */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners */
+    width: 700px; /* Auto width based on content */
 }
 
+.combat_button {
+    font-family:"Pixel Cyr Normal";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/pixcyr2.svg#PixelCyr-Normal") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
 .actions button {
     width: 120px;
     height: 50px;
@@ -40,7 +58,7 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-120%, 200%);
+    transform: translate(-230%, 190%);
     width: 15%;
 }
 
@@ -48,6 +66,6 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(250%, 160%);
+    transform: translate(310%, 190%);
     width: 15%;
 }
