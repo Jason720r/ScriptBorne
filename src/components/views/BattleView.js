@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import './Battle.css'
-import BattleStage from './BrahmCombat.mp4';
+import CyberPunk from './CyberPunk.mp4';
 
 
 export const BattleTime = () => {
@@ -42,7 +42,7 @@ export const BattleTime = () => {
         <div>
             <div className="combat_container">
                 <video autoPlay loop muted className="combat_background">
-                    <source src={BattleStage} type="video/mp4" />
+                    <source src={CyberPunk} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             <div className="battlefield">

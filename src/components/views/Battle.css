@@ -40,6 +40,14 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-120%, 130%);
-    width: 20%;
+    transform: translate(-120%, 200%);
+    width: 15%;
+}
+
+.brahm_enemy {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(250%, 160%);
+    width: 15%;
 }
