@@ -63,8 +63,12 @@ export const BattleTime = () => {
                 <img 
                 src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJCb2R5IjoiMiIsIk1vdXRoIjoiMTMiLCJTaG9lcyI6IjUiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiNyIsIkphY2tldCI6IjMiLCJDYXBlIjoiNSIsIkhhaXIiOiIxOSIsInNraW5Ub25lIjoiZjJjZGI2IiwiZXllc1RvbmUiOiI3MDI2MzIiLCJtYXNrVG9uZSI6IjE5Mzc3ZCIsInBhbnRzVG9uZSI6IjQ0NDQ0NCIsInRvcFRvbmUiOiI0NDQ0NDQiLCJ3aW5nc1RvbmUiOiI0ODViYmYiLCJ3aW5nc1RvbmUyIjoiMTkzNzdkIiwic2hvZXNUb25lIjoiMTcyYzVlIiwiY2FwZVRvbmUiOiIxNTI0NDYiLCJqYWNrZXRUb25lIjoiNzAyNjMyIiwiamFja2V0VG9uZTIiOiJlZWVlZWUifQ==/1/show.png" alt="Enemy" 
                 className="brahm_enemy"/>
-                <div>Player Health: {playerHealth}</div>
-                <div>Enemy Health: {enemyHealth}</div>
+                <div className="health-bar player-health">
+                <div className="health-fill" style={{ width: `${playerHealth}%` }}></div>
+                </div>
+                <div className="health-bar enemy-health">
+                <div className="health-fill" style={{ width: `${enemyHealth}%` }}></div>
+</div>
             </div>
             <div className="actions">
                 <button className="combat_button" onClick={handleAttack}>Attack</button>

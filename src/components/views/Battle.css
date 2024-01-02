@@ -69,3 +69,34 @@
     transform: translate(310%, 190%);
     width: 15%;
 }
+
+.health-bar {
+    width: 200px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    border: 2px solid #000;
+    background-color: #555; /* Background of the bar */
+    border-radius: 5px; /* Optional for rounded corners */
+    margin: 10px -0px;
+    position: relative;
+}
+
+.health-fill {
+    height: 100%;
+    background-color: #f00; /* Red color for health */
+    border-radius: 3px;
+    transition: width 0.8s ease-in-out;
+}
+.player-health{
+    transform: translate(-70%, 400%);
+}
+
+.enemy-health {
+    transform: translate(220%, 400%);
+}
+.player-health .health-fill {
+    background-color: #f00; /* Color for player health */
+}
+
+.enemy-health .health-fill {
+    background-color: #0f0; /* Different color for enemy health, adjust as needed */
+}
