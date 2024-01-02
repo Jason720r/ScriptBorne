@@ -105,12 +105,13 @@
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform: translate(-200%, 60%);
-    animation: fireballMove 3s linear forwards;
+    transform: translate(-410%, 90%);
+    animation: fireballMove 1s linear forwards;
+    width: 200px;
 }
 
 @keyframes fireballMove {
     to {
-        transform: translate(300px, -50%); /* Adjust target position */
+        transform: translate(220%, 0%); 
     }
 }

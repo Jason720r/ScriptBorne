@@ -23,7 +23,7 @@ export const BattleTime = () => {
                 setEnemyHealth(enemyHealth - playerDamage);
                 setShowFireBall(false);
                 setIsPlayerTurn(false)
-            }, 2000)
+            }, 500)
         }
     };
 
