@@ -100,3 +100,17 @@
 .enemy-health .health-fill {
     background-color: #0f0; /* Different color for enemy health, adjust as needed */
 }
+
+.fireball-animation {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fireballMove 1s linear forwards;
+}
+
+@keyframes fireballMove {
+    to {
+        transform: translate(300px, -50%); /* Adjust target position */
+    }
+}

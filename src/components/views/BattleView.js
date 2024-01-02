@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import './Battle.css'
 import CyberPunk from './CyberPunk.mp4';
-
+import FireBall from './Fireball.gif';
 
 export const BattleTime = () => {
     const [playerHealth, setPlayerHealth] = useState(100);
@@ -12,13 +12,18 @@ export const BattleTime = () => {
     const [isPlayerTurn, setIsPlayerTurn] = useState(true);
     const [isEnemyTurn, setIsEnemyTurn] = useState(true)
     const [healthUses, setHealthUses] = useState(0);
+    const [showFireball, setShowFireBall] = useState(false);
 
     const navigate = useNavigate()
 
     const handleAttack = () => {
         if (isPlayerTurn) {
-            setEnemyHealth(enemyHealth - playerDamage);
-            setIsPlayerTurn(false)
+            setShowFireBall(true);
+            setTimeout(() => {
+                setEnemyHealth(enemyHealth - playerDamage);
+                setShowFireBall(false);
+                setIsPlayerTurn(false)
+            }, 2000)
         }
     };
 
@@ -68,6 +73,7 @@ export const BattleTime = () => {
                 </div>
                 <div className="health-bar enemy-health">
                 <div className="health-fill" style={{ width: `${enemyHealth}%` }}></div>
+                {showFireball && <img src={showFireball} alt="Fireball" className="fireball-animation"/>} 
 </div>
             </div>
             <div className="actions">
