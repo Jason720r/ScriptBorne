@@ -3,6 +3,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 import './Battle.css'
 import CyberPunk from './CyberPunk.mp4';
 import FireAttack from './FireAttack.gif'
+import BrahmBeam from './BrahmBeam.gif'
+
 
 export const BattleTime = () => {
     const [playerHealth, setPlayerHealth] = useState(100);
@@ -13,6 +15,7 @@ export const BattleTime = () => {
     const [isEnemyTurn, setIsEnemyTurn] = useState(true)
     const [healthUses, setHealthUses] = useState(0);
     const [showFireball, setShowFireBall] = useState(false);
+    const [showLaser, setShowLaser] = useState(false);
 
     const navigate = useNavigate()
 
@@ -28,7 +31,15 @@ export const BattleTime = () => {
     };
 
     const handleEnemyAttack = () => {
-        setPlayerHealth(prevHealth => prevHealth - enemyDamage);
+        if (isEnemyTurn) {
+            setShowLaser(true);
+            setTimeout(() => {
+                setPlayerHealth(prevHealth => prevHealth - enemyDamage);
+                setShowLaser(false);
+
+            }, 1000)
+        }
+        
     };
     
     const handleHealth = () => {
@@ -74,6 +85,7 @@ export const BattleTime = () => {
                 <div className="health-bar enemy-health">
                 <div className="health-fill" style={{ width: `${enemyHealth}%` }}></div>
                 {showFireball && <img src={FireAttack} alt="Fireball" className="fireball-animation"/>} 
+                {showLaser && <img src={BrahmBeam} alt="Laser" className="laser_animation"/>}
 </div>
             </div>
             <div className="actions">

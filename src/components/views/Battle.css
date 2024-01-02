@@ -87,11 +87,11 @@
     transition: width 0.8s ease-in-out;
 }
 .player-health{
-    transform: translate(-70%, 400%);
+    transform: translate(-80%, 1000%);
 }
 
 .enemy-health {
-    transform: translate(220%, 400%);
+    transform: translate(220%, 1000%);
 }
 .player-health .health-fill {
     background-color: #f00; /* Color for player health */
@@ -105,7 +105,7 @@
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform: translate(-410%, 90%);
+    transform: translate(-480%, 20%);
     animation: fireballMove 1s linear forwards;
     width: 200px;
 }
@@ -113,5 +113,20 @@
 @keyframes fireballMove {
     to {
         transform: translate(220%, 0%); 
+    }
+}
+
+.laser_animation {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-130%, -5%) scaleX(-2);
+    /* animation: laserMove 2s linear forwards; */
+    width: 700px;
+}
+
+@keyframes laserMove {
+    to {
+        transform: translate(-145%, 40%);
     }
 }
