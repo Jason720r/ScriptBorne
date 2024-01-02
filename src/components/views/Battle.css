@@ -21,21 +21,21 @@
 }
 
 .battlefield {
-    top: 30%; /* Adjust the position as necessary */
+    top: 30%; 
 }
 
 .actions {
-    bottom: -630px; /* Position it lower */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust for exact centering */
+    bottom: -630px; 
+    left: 50%; 
+    transform: translateX(-50%); 
     display: grid;
-    grid-template-columns: repeat(2, auto); /* Two columns */
+    grid-template-columns: repeat(2, auto); 
     grid-gap: 10px;
-    border: 6px solid rgb(255, 255, 255); /* Add a border */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 20px; /* Add some padding */
-    border-radius: 10px; /* Rounded corners */
-    width: 700px; /* Auto width based on content */
+    border: 6px solid rgb(255, 255, 255); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 700px; 
 }
 
 .combat_button {
@@ -105,8 +105,8 @@
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fireballMove 1s linear forwards;
+    transform: translate(-200%, 60%);
+    animation: fireballMove 3s linear forwards;
 }
 
 @keyframes fireballMove {
