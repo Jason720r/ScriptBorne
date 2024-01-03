@@ -15,9 +15,11 @@ export const Franklin = () => {
   const [jasonPopupOpen, setJasonPopupOpen] = useState(false);
   const [burgerQueenPopupOpen, setBurgerQueenPopupOpen] = useState(false);
   const [nolaPopupOpen, setNolaPopupOpen] = useState(false);
+  const [actionPopupOpen, setActionPopupOpen] = useState(false);
   const [jasonInteraction, setJasonInteraction] = useState("start");
   const [burgerQueenInteraction, setBurgerQueenInteraction] = useState("start");
   const [nolaInteraction, setNolaInteraction] = useState("start");
+  const [actionInteraction, setActionInteraction] = useState("start");
   const [interaction, setInteraction] = useState([]);
   const [currentNPC, setCurrentNPC] = useState(null);
   const [popupData, setPopupData] = useState({
@@ -40,6 +42,10 @@ export const Franklin = () => {
     setNolaPopupOpen(false);
   }
 
+  const handleCloseActionPopup = () => {
+    setActionPopupOpen(false);
+  }
+
 
 
   const handleInteractionJason = () => {
@@ -57,6 +63,10 @@ export const Franklin = () => {
     setNolaInteraction("start")
   }
   
+  const handleActionInteraction = () => {
+    setActionPopupOpen(true);
+    setActionInteraction("start")
+  }
 
   const handleOption1 = () => {
     handleCloseJasonPopup();
@@ -74,10 +84,18 @@ export const Franklin = () => {
     handleCloseNolaPopup();
 
   };
+
+  const handleActionOption = () => {
+    handleCloseActionPopup();
+  }
   
 
 const handleBrahmCity = () => {
   navigate('/stage');
+}
+
+const handleNolaBattle = () => {
+  navigate('/nola');
 }
 
   
@@ -162,6 +180,7 @@ const handleBrahmCity = () => {
                 {nolaInteraction === "start" && (
                   <>
                 <button onClick={handleOption3} className="dialogue_button">Uh Hi?</button>
+                <button onClick={handleOption3} className="dialogue_button">*Attack</button>
                 <button onClick={handleOption3} className="dialogue_button">Leave</button>
                 </>
                 )}
