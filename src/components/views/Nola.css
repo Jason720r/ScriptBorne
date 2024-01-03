@@ -1,0 +1,42 @@
+.nola_container {
+    position: relative;
+}
+
+.nola_background {
+    width: 90%;
+    height: 90vh; 
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 70px;
+    z-index: -1; 
+}
+
+.nolafield, .actions {
+    position: absolute;
+    width: 70%; /* Adjust width as necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actions {
+    bottom: -630px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+    grid-gap: 10px;
+    border: 6px solid rgb(255, 255, 255); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 700px; 
+}
+
+.battle_nola {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(310%, 190%);
+    width: 15%;
+}

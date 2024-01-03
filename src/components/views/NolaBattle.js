@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NolaBattle from './NolaBattle.mp4';
 import FireAttack from './FireAttack.gif'
 import BrahmBeam from './BrahmBeam.gif'
+import './Nola.css'
 
 export const BattleNola = () => {
     const [playerHealth, setPlayerHealth] = useState(100);
