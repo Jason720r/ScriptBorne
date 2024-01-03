@@ -16,6 +16,9 @@ export const BattleTime = () => {
     const [healthUses, setHealthUses] = useState(0);
     const [showFireball, setShowFireBall] = useState(false);
     const [showLaser, setShowLaser] = useState(false);
+    const [fightLost, setFightLost] = useState(false);
+    const [conclusionPopupOpen, setConclusionPopupOpen] = useState(false);
+    const [conclusionInteraction, setConclusionInteraction] = useState("start")
 
     const navigate = useNavigate()
 
@@ -63,6 +66,25 @@ export const BattleTime = () => {
 
     const handleEscape = () => {
         navigate('/main');
+    }
+
+    const handleCloseConclusionPopup = () => {
+        setConclusionPopupOpen(false);
+    }
+
+    const handleInteractionConclusion = () => {
+        setConclusionPopupOpen(true);
+        setConclusionInteraction("start")
+    }
+
+    const handleConclusionOption = () => {
+        handleConclusion();
+    }
+
+    const handleConclusion = () => {
+        if (playerHealth < 1) {
+
+        }
     }
 
     return (
