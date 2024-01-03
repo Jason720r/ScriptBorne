@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NolaBattle from './NolaBattle.mp4';
+import FireAttack from './FireAttack.gif'
+import BrahmBeam from './BrahmBeam.gif'
 
 export const BattleNola = () => {
     const [playerHealth, setPlayerHealth] = useState(100);
@@ -26,7 +29,7 @@ export const BattleNola = () => {
     }
 
     const handleNolaAttack = () => {
-        if (isEnemyTurn) {
+        if (isNolaTurn) {
             setShowChiChi(true);
             setTimeout(() => {
                 setPlayerHealth(prevHealth => prevHealth - nolaDamage);
@@ -57,5 +60,33 @@ export const BattleNola = () => {
     const handleEscape = () => {
         navigate('/main');
     }
-    
+    return (
+        <div>
+            <div className="nola_container">
+                <video autoPlay loop muted className="nola_background">
+                    <source src={NolaBattle} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            <div className="nolafield">
+                <img
+                src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjciLCJCb2R5IjoiMyIsIkV5ZXMiOiIxNyIsIk1vdXRoIjoiMTQiLCJTaG9lcyI6IjEiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiMTMiLCJOZWNrIjoiMyIsIkhhaXIiOiIzMSIsInNraW5Ub25lIjoiZjRkNWMxIiwiZXllc1RvbmUiOiI0ZDdjMWUiLCJoYWlyVG9uZSI6ImYwZWY5MyIsInRvcFRvbmUiOiJmZmViYWIiLCJzaG9lc1RvbmUiOiJlZGVkZWQiLCJjYXBlVG9uZSI6IjUxMTUxNSIsImNhcGVUb25lMiI6ImVjMjQyNCJ9/1/show.png" alt="Nola"
+                className="battle_nola"/>
+                <div className="health-bar player-health">
+                <div className="health-fill" style={{ width: `${playerHealth}%` }}></div>
+                </div>
+                <div className="health-bar nola-health">
+                <div className="health-fill" style={{ width: `${nolaHealth}%` }}></div>
+                {showFireball && <img src={FireAttack} alt="Fireball" className="fireball-animation"/>} 
+                {showChiChi && <img src={BrahmBeam} alt="Laser" className="laser_animation"/>}
+</div>
+            </div>
+            <div className="actions">
+                <button className="combat_button" onClick={handlePlayerAttack}>Attack</button>
+                <button className="combat_button"  onClick={handleDefend}>Defend</button>
+                <button className="combat_button" onClick={handleHealth} disabled={healthUses >= 3}>Restore Health</button>
+                <button className="combat_button" onClick={handleEscape}>Run</button>
+            </div>
+        </div>
+        </div>
+    )
     }
