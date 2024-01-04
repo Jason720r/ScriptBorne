@@ -77,13 +77,21 @@ export const BattleTime = () => {
         setConclusionInteraction("start")
     }
 
-    const handleConclusionOption = () => {
-        handleConclusion();
-    }
 
-    const handleConclusion = () => {
-        if (playerHealth < 1) {
 
+    useEffect(() => {
+        if (playerHealth <= 0) {
+            setFightLost(true);
+            setConclusionPopupOpen(true);
+        }
+    }, [playerHealth])
+
+    const handlePopupChoice = (choice) => {
+        setConclusionPopupOpen(false);
+        if(choice === 'retry'){
+
+        } else if (choice === 'exit') {
+            navigate('/main');
         }
     }
 
@@ -116,6 +124,16 @@ export const BattleTime = () => {
                 <button className="combat_button" onClick={handleHealth} disabled={healthUses >= 3}>Restore Health</button>
                 <button className="combat_button" onClick={handleEscape}>Run</button>
             </div>
+            {conclusionPopupOpen && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <h2>{fightLost ? "You Lost!" : "Game Over"}</h2>
+                        <p>What would you like to do?</p>
+                        <button onClick={() => handlePopupChoice('retry')}>Retry</button>
+                        <button onClick={() => handlePopupChoice('exit')}>Exit</button>
+                    </div>
+                </div>
+            )}
         </div>
         </div>
     );
