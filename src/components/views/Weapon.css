@@ -6,7 +6,7 @@
 .individual_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum and maximum width as needed */
-    gap: 20px; /* Adjust the gap between cards */
+    gap: 70px; /* Adjust the gap between cards */
 }
 
 .weapon_title {
@@ -58,4 +58,55 @@
     padding: 15px;
      margin: 10px;
     color: #ffffff;
+}
+
+.quiet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-490%, -70%);
+    width: 9%;
+    transition: transform 0.3s ease;
+}
+
+.quiet:hover {
+    transform: translate(-490%, -80%) scale(1.1); 
+}
+
+.toilet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, -40%);
+    width: 9%;
+    transition: transform 0.3s ease;
+}
+.toilet:hover {
+    transform: translate(-200%, -40%) scale(1.1);
+}
+
+.katana {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(70%, -30%);
+    width: 9%;
+    transition: transform 0.3s ease;
+}
+
+.katana:hover {
+    transform: translate(70%, -30%) scale(1.1);
+}
+
+.sword {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(370%, -20%);
+    width: 9%;
+    transition: transform 0.3s ease;
+}
+
+.sword:hover {
+    transform: translate(370%, -20%) scale(1.1);
 }

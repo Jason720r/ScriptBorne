@@ -129,7 +129,6 @@ export const BattleTime = () => {
                     <div className="popup-content">
                         <h2>{fightLost ? "You Lost!" : "Game Over"}</h2>
                         <p>What would you like to do?</p>
-                        <button onClick={() => handlePopupChoice('retry')}>Retry</button>
                         <button onClick={() => handlePopupChoice('exit')}>Exit</button>
                     </div>
                 </div>
