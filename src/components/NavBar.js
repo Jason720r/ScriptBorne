@@ -24,27 +24,6 @@ export const NavBar = () => {
 </Link>
 </li>
 <li className="navbar__item">
-    <Link className="nav-link" to="/stage">
-    <i className="fas fa-edit"></i>
-    <div className="about_nav"> Travel</div>
-    <span></span>
-</Link>
-</li>
-<li className="navbar__item">
-    <Link className="nav-link" to="/city">
-    <i className="fas fa-edit"></i>
-    <div className="about_nav">Brahm City</div>
-    <span></span>
-</Link>
-</li>
-<li className="navbar__item">
-    <Link className="nav-link" to="/brass">
-    <i className="fas fa-edit"></i>
-    <div className="about_nav">Combat test</div>
-    <span></span>
-</Link>
-</li>
-<li className="navbar__item">
     <Link className="nav-link" to="/nola">
     <i className="fas fa-edit"></i>
     <div className="about_nav">Nola Battle</div>

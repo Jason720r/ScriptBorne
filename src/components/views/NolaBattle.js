@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NolaBattle from './NolaBattle.mp4';
-import FireAttack from './FireAttack.gif'
-import BrahmBeam from './BrahmBeam.gif'
+import FireAttack from './FireAttack.gif';
+import BrahmBeam from './BrahmBeam.gif';
+import ChiChi from './Chi.png';
+import Nola from './Nola.png'
 import './Nola.css'
 
 export const BattleNola = () => {
@@ -15,6 +17,7 @@ export const BattleNola = () => {
     const [healthUses, setHealthUses] = useState(0);
     const [showFireball, setShowFireBall] = useState(false);
     const [showChiChi, setShowChiChi] = useState(false);
+    const [showPopup, setShowPopup] = useState(false)
 
     const navigate = useNavigate()
 
@@ -58,6 +61,14 @@ export const BattleNola = () => {
         }
     }, [isPlayerTurn, playerHealth, nolaDamage])
 
+    useEffect(() => {
+        setShowPopup(true);
+    }, []);
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    }
+
     const handleEscape = () => {
         navigate('/main');
     }
@@ -68,10 +79,27 @@ export const BattleNola = () => {
                     <source src={NolaBattle} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+        
             <div className="nolafield">
+            {showPopup && (
+                    <div className="nola_container">
+                    <div className="nola_entry">
+                        <img
+                        src={Nola}
+                        alt="Nola"
+                        className="nola_popup"
+                        onClick={handleClosePopup}
+                        />
+                        <p className="pop_text">What made you think attacking me was a good idea?</p>
+                        </div>
+                        </div>
+                )}
                 <img
                 src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjciLCJCb2R5IjoiMyIsIkV5ZXMiOiIxNyIsIk1vdXRoIjoiMTQiLCJTaG9lcyI6IjEiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiMTMiLCJOZWNrIjoiMyIsIkhhaXIiOiIzMSIsInNraW5Ub25lIjoiZjRkNWMxIiwiZXllc1RvbmUiOiI0ZDdjMWUiLCJoYWlyVG9uZSI6ImYwZWY5MyIsInRvcFRvbmUiOiJmZmViYWIiLCJzaG9lc1RvbmUiOiJlZGVkZWQiLCJjYXBlVG9uZSI6IjUxMTUxNSIsImNhcGVUb25lMiI6ImVjMjQyNCJ9/1/show.png" alt="Nola"
                 className="battle_nola"/>
+                <img
+                src={ChiChi}
+                className="battle_chi"/>
                 <div className="health-bar player-health">
                 <div className="health-fill" style={{ width: `${playerHealth}%` }}></div>
                 </div>
@@ -81,12 +109,12 @@ export const BattleNola = () => {
                 {showChiChi && <img src={BrahmBeam} alt="Laser" className="laser_animation"/>}
 </div>
             </div>
-            <div className="actions">
+            {/* <div className="actions">
                 <button className="combat_button" onClick={handlePlayerAttack}>Attack</button>
                 <button className="combat_button"  onClick={handleDefend}>Defend</button>
                 <button className="combat_button" onClick={handleHealth} disabled={healthUses >= 3}>Restore Health</button>
                 <button className="combat_button" onClick={handleEscape}>Run</button>
-            </div>
+            </div> */}
         </div>
         </div>
     )

@@ -37,6 +37,64 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(310%, 190%);
-    width: 15%;
+    transform: translate(430%, 200%);
+    width: 3%;
 }
+
+.battle_chi {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(310%, 190%);
+    width: 10%;
+}
+.nola_container {
+    position: relative;
+    top: 50%; 
+    left: 50%; 
+    right: 200%;
+    transform: translate(-50%, 10%);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1500px; 
+    max-height: 500px;
+    width: 10000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.nola_entry {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-20%, 40%); 
+    border-color: transparent transparent #0f0b0b transparent;
+    background-color: rgb(0, 0, 0) !important;;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px; 
+    max-height: 500px;
+    width: 600px;
+    height: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.nola_popup {
+    max-width: 80%;
+    max-height: 80%;
+    cursor: pointer;
+    width: 130px;
+    transform: translate(170%, -20%); 
+}
+.pop_text {
+    font-family:"Play";
+    src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.svg#Play") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    width: 600px;
+    height: 100px;
+    
+  }
