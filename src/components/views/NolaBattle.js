@@ -90,7 +90,7 @@ export const BattleNola = () => {
                         className="nola_popup"
                         onClick={handleClosePopup}
                         />
-                        <p className="pop_text">What made you think attacking me was a good idea?</p>
+                        <p className="cat_text">What made you think attacking me was a good idea?</p>
                         </div>
                         </div>
                 )}

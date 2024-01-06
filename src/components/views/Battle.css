@@ -131,22 +131,47 @@
     }
 }
 
-.popup {
+.death_popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10; /* Ensure it's above other content */
+    z-index: 10; 
 }
 
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+.death_content {
     text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.death_content h2 {
+    color: red; 
+    font-size: 2em; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.death_content p {
+    color: white; 
+    font-size: 1.5em; 
+    font-family: 'Times New Roman', serif; 
+    margin-bottom: 20px;
+}
+
+.death_content button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
 }

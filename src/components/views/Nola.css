@@ -86,7 +86,7 @@
     width: 130px;
     transform: translate(170%, -20%); 
 }
-.pop_text {
+.cat_text {
     font-family:"Play";
     src:url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.eot") format("eot"),
         url("https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/fonts/Play-Regular.woff") format("woff"),

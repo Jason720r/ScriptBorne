@@ -6,7 +6,7 @@ export const CharacterInfo = () => {
     const [characters, setCharacter ] = useState([]);
     const [expanded, setExpanded] = useState([]);
     
-
+//when the component mounts
     useEffect(() => {
         fetch("http://localhost:8088/players")
             .then((response) => response.json())

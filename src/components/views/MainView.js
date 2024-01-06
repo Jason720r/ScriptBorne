@@ -180,7 +180,7 @@ const handleNolaBattle = () => {
                 {nolaInteraction === "start" && (
                   <>
                 <button onClick={handleOption3} className="dialogue_button">Uh Hi?</button>
-                <button onClick={handleOption3} className="dialogue_button">*Attack</button>
+                <button onClick={handleNolaBattle} className="dialogue_button">*Attack</button>
                 <button onClick={handleOption3} className="dialogue_button">Leave</button>
                 </>
                 )}

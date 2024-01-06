@@ -7,6 +7,7 @@ import BrahmBeam from './BrahmBeam.gif'
 
 
 export const BattleTime = () => {
+    //initial states
     const [playerHealth, setPlayerHealth] = useState(100);
     const [enemyHealth, setEnemyHealth] = useState(100);
     const [playerDamage, setPlayerDamage] = useState(10);
@@ -23,9 +24,12 @@ export const BattleTime = () => {
     const navigate = useNavigate()
 
     const handleAttack = () => {
+        //condition
         if (isPlayerTurn) {
+            //CSS
             setShowFireBall(true);
             setTimeout(() => {
+                //Example of useState/setter function
                 setEnemyHealth(enemyHealth - playerDamage);
                 setShowFireBall(false);
                 setIsPlayerTurn(false)
@@ -125,10 +129,10 @@ export const BattleTime = () => {
                 <button className="combat_button" onClick={handleEscape}>Run</button>
             </div>
             {conclusionPopupOpen && (
-                <div className="popup">
-                    <div className="popup-content">
-                        <h2>{fightLost ? "You Lost!" : "Game Over"}</h2>
-                        <p>What would you like to do?</p>
+                <div className="death_popup">
+                    <div className="death_content">
+                        <h2>{fightLost ? "Scripts Lost" : "Game Over"}</h2>
+                        <p>YOU DIED</p>
                         <button onClick={() => handlePopupChoice('exit')}>Exit</button>
                     </div>
                 </div>
