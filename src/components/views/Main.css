@@ -136,8 +136,8 @@
 
   .interact_tanner {
     position: absolute;
-    top: 40%; /* Adjust the top position as needed */
-    left: 72%;
+    top: 88%; /* Adjust the top position as needed */
+    left: 89%;
     transform: translate(-180%, -50%);
     color: #fff;
     border: none;
@@ -145,7 +145,7 @@
     border-radius: 0px;
     cursor: pointer;
     font-family:"Final Fantasy Script Collection - Final Fantasy VII";
-    font-size: 40px;
+    font-size: 50px;
     background-color: transparent;
     color: rgb(255, 255, 255);
     font-smooth: never;

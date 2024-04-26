@@ -7,6 +7,7 @@ import "./Main.css"
  import BatBrahm from './BatBrahm.png'
  import ShrineVideo from './ShrineVideo.mp4';
  import BurgerQueen from './Burger.png';
+ import Tanner from './Tanner.png';
  import { Navigate, useNavigate } from "react-router-dom";
 
 
@@ -15,10 +16,12 @@ export const Franklin = () => {
   const [jasonPopupOpen, setJasonPopupOpen] = useState(false);
   const [burgerQueenPopupOpen, setBurgerQueenPopupOpen] = useState(false);
   const [nolaPopupOpen, setNolaPopupOpen] = useState(false);
+  const [tannerPopupOpen, setTannerPopupOpen] = useState(false);
   const [actionPopupOpen, setActionPopupOpen] = useState(false);
   const [jasonInteraction, setJasonInteraction] = useState("start");
   const [burgerQueenInteraction, setBurgerQueenInteraction] = useState("start");
   const [nolaInteraction, setNolaInteraction] = useState("start");
+  const [tannerInteraction, setTannerInteraction] = useState("start");
   const [actionInteraction, setActionInteraction] = useState("start");
   const [interaction, setInteraction] = useState([]);
   const [currentNPC, setCurrentNPC] = useState(null);
@@ -42,6 +45,11 @@ export const Franklin = () => {
     setNolaPopupOpen(false);
   }
 
+  const handleCloseTannerPopup = () => {
+    setTannerPopupOpen(false);
+  }
+
+
   const handleCloseActionPopup = () => {
     setActionPopupOpen(false);
   }
@@ -61,6 +69,10 @@ export const Franklin = () => {
   const handleInteractionNola = () => {
     setNolaPopupOpen(true);
     setNolaInteraction("start")
+  }
+  const handleInteractionTanner = () => {
+    setTannerPopupOpen(true);
+    setTannerInteraction("start")
   }
   
   const handleActionInteraction = () => {
@@ -85,6 +97,11 @@ export const Franklin = () => {
 
   };
 
+  const handleOption5 = () => {
+
+    handleCloseTannerPopup();
+
+  };
   const handleActionOption = () => {
     handleCloseActionPopup();
   }
@@ -146,6 +163,10 @@ const handleNolaBattle = () => {
 
         <button onClick={ handleInteractionNola} className="interact_nola">
           Brahm
+        </button>
+
+        <button onClick={ handleInteractionTanner} className="interact_tanner">
+          Tanner
         </button>
 
         </div>
@@ -211,6 +232,30 @@ const handleNolaBattle = () => {
                   <>
                 <button onClick={handleOption2} className="dialogue_button">Uhhhh Hi?</button>
                 <button onClick={handleOption2} className="dialogue_button">Leave</button>
+                </>
+                )}
+                
+              </div>
+            </div>
+          </div>
+        )}
+        {tannerPopupOpen && (
+          <div className="popup_container">
+            <div className="popup_content">
+              <img
+                src={Tanner}
+                alt="Popup Image"
+                className="popup_image"
+              />
+              <p className="pop_text">Sup dude</p>
+  
+              <div className="dialogue_options">
+                {tannerInteraction === "start" && (
+                  <>
+                <button onClick={handleOption5} className="dialogue_button">That's so gay</button>
+                <button onClick={handleOption5} className="dialogue_button">*Ask about PUBG strats.</button>
+                <button onClick={handleOption5} className="dialogue_button">TANNERRRRRR</button>
+                <button onClick={handleOption5} className="dialogue_button">Leave</button>
                 </>
                 )}
                 
