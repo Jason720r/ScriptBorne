@@ -47,6 +47,14 @@
     transform: translate(-50%, 140%);
     width: 16%;
   }
+
+  .npc_five {
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, 140%);
+    width: 16%;
+  }
   
   .interact_button {
     position: absolute;
@@ -70,7 +78,7 @@
   .interact_nola {
     position: absolute;
     top: 70%; /* Adjust the top position as needed */
-    left: 77%;
+    left: 72%;
     transform: translate(-180%, -50%);
     color: #fff;
     border: none;
@@ -124,6 +132,25 @@
     -webkit-font-smoothing : none;
     line-height: 20px;
 
+  }
+
+  .interact_tanner {
+    position: absolute;
+    top: 40%; /* Adjust the top position as needed */
+    left: 72%;
+    transform: translate(-180%, -50%);
+    color: #fff;
+    border: none;
+    padding: 15px 10px; /* Adjust padding as needed */
+    border-radius: 0px;
+    cursor: pointer;
+    font-family:"Final Fantasy Script Collection - Final Fantasy VII";
+    font-size: 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    line-height: 20px;
   }
 
 

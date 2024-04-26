@@ -7,4 +7,4 @@ const convertString = (string) => {
 
 }
 
-console.log(convertString("12345"));
+console.log(convertString("12345"));cd 

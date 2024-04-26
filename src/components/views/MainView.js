@@ -109,7 +109,7 @@ const handleNolaBattle = () => {
             Your browser does not support the video tag.
           </video>
            <img
-            src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjciLCJCb2R5IjoiMyIsIkV5ZXMiOiIxNyIsIk1vdXRoIjoiMTQiLCJTaG9lcyI6IjEiLCJHbG92ZXMiOiIxIiwiUGFudHMiOiIxIiwiVG9wIjoiMTMiLCJOZWNrIjoiMyIsIkhhaXIiOiIzMSIsInNraW5Ub25lIjoiZjRkNWMxIiwiZXllc1RvbmUiOiI0ZDdjMWUiLCJoYWlyVG9uZSI6ImYwZWY5MyIsInRvcFRvbmUiOiJmZmViYWIiLCJzaG9lc1RvbmUiOiJlZGVkZWQiLCJjYXBlVG9uZSI6IjUxMTUxNSIsImNhcGVUb25lMiI6ImVjMjQyNCJ9/1/show.png"
+            src="http://www.avatarsinpixels.com/minipix/eyJDYXBlQmFjayI6IjIiLCJFeWVzIjoiMjYiLCJNb3V0aCI6IjQiLCJTaG9lcyI6IjEiLCJQYW50cyI6IjIiLCJUb3AiOiIxMyIsIkJlbHQiOiIxIiwiSGFpciI6IjE2Iiwic2tpblRvbmUiOiJmM2IwODQiLCJoYWlyVG9uZSI6Ijc4MzkzYiIsInRvcFRvbmUiOiIwMDAwMDAiLCJzaG9lc1RvbmUiOiJlZWVlZWUiLCJjYXBlVG9uZSI6IjFlMTU1MSJ9/1/show.png"
             alt="Nola Granola"
             className="npc_one"
             onClick={() => handleInteractionNola("Nola Granola")}
@@ -126,6 +126,12 @@ const handleNolaBattle = () => {
             className="npc_three"
             onClick={() => handleInteractionBurgerQueen("Burger Queen")}
           />
+          <img
+            src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiIxNiIsIkNhcGVCYWNrIjoiNCIsIkJvZHkiOiIxIiwiRXllcyI6IjEiLCJNb3V0aCI6IjQiLCJTaG9lcyI6IjEiLCJQYW50cyI6IjEiLCJUb3AiOiI3IiwiSmFja2V0IjoiNyIsIkhhaXIiOiI0Iiwic2tpblRvbmUiOiJlYmMxYTMiLCJleWVzVG9uZSI6IjI2MTUxMiIsImhhaXJUb25lIjoiMjYxNTEyIiwicGFudHNUb25lIjoiMjYxNTEyIiwidG9wVG9uZSI6IjI2MTUxMiIsInNob2VzVG9uZSI6Ijg5MjEyMSIsImNhcGVUb25lIjoiNTgwZTBlIiwiamFja2V0VG9uZSI6IjZkMWIxYiJ9/1/show.png"
+            alt="Tanner"
+            className="npc_five"
+            onClick={() => handleInteractionNola("Nola Granola")}
+          />
 
           <button onClick={handleInteractionJason} className="interact_jason">
             Jason
@@ -139,7 +145,7 @@ const handleNolaBattle = () => {
         </button>
 
         <button onClick={ handleInteractionNola} className="interact_nola">
-          Nola Granola
+          Brahm
         </button>
 
         </div>
