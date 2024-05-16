@@ -21,9 +21,9 @@ export const NavBar = () => {
 </Link>
 </li>
 <li className="navbar__item">
-    <Link className="nav-link" to="/nola">
+    <Link className="nav-link" to="/tanner">
     <i className="fas fa-edit"></i>
-    <div className="about_nav">Nola Battle</div>
+    <div className="about_nav">Tanner Talk</div>
     <span></span>
 </Link>
 </li>
