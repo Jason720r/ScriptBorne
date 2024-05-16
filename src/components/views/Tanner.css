@@ -1,82 +1,183 @@
-.ruin_home {
-    width: 100%;
-    height: 130%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-  .tanner_container {
+.tanner_container {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
+.ruin_home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-  .centered_container {
+.centered_container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(55, 52, 52, 0.8);
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(233, 231, 231, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(10, 6, 18, 0.999); /* Black background without transparency */
+    border: 2px solid rgb(107, 83, 158); /* Golden border */
+    box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
+    padding: 20px;
+    overflow-y: auto;
 }
 
-.smol_container {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(223, 212, 212, 0.8);
+.header_section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile_section {
-    display: flex;
-    align-items: center;
+    justify-content: flex-end;
     margin-bottom: 20px;
+}
+
+.profile_info {
+    display: flex;
+    align-items: center;
+}
+@keyframes flaming-border {
+    0% {
+        box-shadow:
+        0px -1px 3px #fff,    /* Intense heat (white) */
+        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(51, 54, 204);
+    }
+    50% {
+        box-shadow:
+        0px -1px 3px #fff,    /* Intense heat (white) */
+        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(51, 54, 204);
+    }
+    100% {
+        box-shadow:
+        0px -1px 3px #fff,    /* Intense heat (white) */
+        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(51, 54, 204);
+    }
 }
 
 .profile_picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-left: 20px;
+    animation: flaming-border 2s infinite;
+}
+.hello_kitty {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.kitty_logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
 }
 
 .user_info {
-    flex-grow: 1;
+    text-align: right;
+    
 }
 
 .user_info h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 29px;
+    color: #f5f5f5;
+    text-shadow:
+        0px -1px 3px #fff,    /* Intense heat (white) */
+        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(51, 54, 204);  /* Edges of flame (red) */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Optional: Add animation for flickering effect */
+@keyframes flicker {
+    0%, 100% {
+        text-shadow:
+            0px -1px 3px #fff,
+            0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+            0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+            0px -10px 20px rgb(51, 54, 204);
+    }
+    50% {
+        text-shadow:
+            0px -2px 6px #fff,
+            0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+            0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+            0px -10px 20px rgb(51, 54, 204);
+    }
+}
+
+.user_info h1 {
+    animation: flicker 2s infinite;
 }
 
 .user_info p {
     margin: 5px 0 0;
     font-style: italic;
+    font-family: 'Permanent Marker', cursive;
+    color: #fefefe; /* Bright pink color */
+    text-shadow:
+        2px 2px 0 #3f1811,  /* Tomato shadow */
+        -2px -2px 0 #ffa500, /* Orange shadow */
+        2px -2px 0 #ffd700,  /* Gold shadow */
+        -2px 2px 0 #adff2f;  /* GreenYellow shadow */
+
+        border: 2px solid rgb(213, 208, 224); /* Golden border */
+        box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
+    
+}
+
+.content_section {
+    margin-bottom: 20px;
+    
+}
+
+.content_section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.desc {
+    font-family: 'Permanent Marker', cursive;
+    color: #fefefe; /* Bright pink color */
+    text-shadow:
+        2px 2px 0 #3f1811,  /* Tomato shadow */
+        -2px -2px 0 #ff0400, /* Orange shadow */
+        2px -2px 0 #ffd700,  /* Gold shadow */
+        -2px 2px 0 #ff2f2f;  /* GreenYellow shadow */
+
+        border: 2px solid rgb(213, 208, 224); /* Golden border */
+        box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
 }
 
 .controls {
     position: absolute;
-    top: 130px;
+    top: 10px;
     left: 10px;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
     color: white;
-    z-index: -1;
 }
 
 .controls label {
+    display: flex;
+    align-items: center;
     margin-right: 10px;
+}
+
+.controls button {
+    margin-left: 5px;
+}
+.tol_logo {
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
 }
