@@ -20,12 +20,50 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(55, 52, 52, 0.8);
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(233, 231, 231, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.smol_container {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(223, 212, 212, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile_picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user_info {
+    flex-grow: 1;
+}
+
+.user_info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.user_info p {
+    margin: 5px 0 0;
+    font-style: italic;
 }
 
 .controls {
@@ -36,6 +74,7 @@
     padding: 10px;
     border-radius: 5px;
     color: white;
+    z-index: -1;
 }
 
 .controls label {
