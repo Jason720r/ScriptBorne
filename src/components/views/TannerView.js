@@ -11,7 +11,7 @@ export const TannerTalk = () => {
     const [showPopup, setShowPopup] = useState(false)
     const [width, setWidth] = useState(1000);
     const [height, setHeight] = useState(700);
-
+    const [currentSlide, setCurrentSlide] = useState(0);
     const navigate = useNavigate()
 
   
