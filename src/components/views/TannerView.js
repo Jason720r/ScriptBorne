@@ -14,6 +14,12 @@ export const TannerTalk = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const navigate = useNavigate()
 
+    const slides = [Slide1, Slide2, Slide3];
+
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
+    }
+
   
 
     return (
