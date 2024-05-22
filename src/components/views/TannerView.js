@@ -12,6 +12,7 @@ export const TannerTalk = () => {
     const [width, setWidth] = useState(1000);
     const [height, setHeight] = useState(700);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [lastSlide, setLastSlide] = useState(0);
     const navigate = useNavigate()
 
     const slides = [Slide1, Slide2, Slide3];
