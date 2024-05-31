@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Tanner from './Tanner.png';
 import Ruins from './Ruins.mp4';
-import ProfilePicture from './pfp.png';
+import ProfilePicture from './Tanner.png';
 import Kitty from './kitty.png';
-import Tol from './toooooilet.png';
+import Tol from './Kittyy.png';
 import "./Tanner.css"
 import Slide1 from './Piano.jpg';
 import Slide2 from './Grad.png';
 import Slide3 from './Hog.png';
+import Goth from './Goth.png';
+import Gif from './giphy.gif';
+import Gif2 from './hellooo.gif';
 
 export const TannerTalk = () => {
     const [showPopup, setShowPopup] = useState(false)
@@ -43,7 +46,7 @@ export const TannerTalk = () => {
                             <h1>Username:
                             Enbyriot
                             </h1>
-                            <p> Work in Progress!</p>
+                            <p> </p>
                         </div>
                     
                     </div>
@@ -52,20 +55,28 @@ export const TannerTalk = () => {
                             <img src={Kitty} alt="Kitty" className="kitty_logo"/>
                         </div>
                         </div>
-                    <div className="content_section">
-                        <h2>About Me</h2>
-                        <p>Imagine you had your own fake MySpace Tumblr page Tanner, imagine.....
-                            I'M STILL WORKING ON IT OKAY
-                        </p>
+                        <div className="content_section about_me">
+                <h2>About Me</h2>
+            <div className="about_content">
+                 <img src={Goth} alt="About Me" className="about_image" />
+                 <ul className="about_comment">
+            <li>Catholicism (I'm not religious)</li>
+            <li>Cranking My Hog</li>
+            <li>Hello Kitty</li>
+            <li>Nursing</li>
+            <li>RAHHHHH</li>
+        </ul>
+                </div>
                         <div className="hello_toilet">
-                            <img src={Tol} alt="tol" className="tol_logo"/>
+                            <img src={Gif} alt="tol" className="tol_logo"/>
+                        </div>
+                        <div className="hello_skibidi">
+                            <img src={Gif2} alt="tol" className="skib_logo"/>
                         </div>
                     </div>
                     <div className="content_section">
-                        <h2>Interests</h2>
-                        <p className="desc">DAMN LOOK AT THIS TOILET
-                        
-                        DO NOT CLICK IT</p>
+                        <h2>Construction</h2>
+                        <p className="desc"></p>
                     </div>
                     <div className="slider_section">
                         <button onClick={prevSlide}>{"<"}</button>

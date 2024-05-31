@@ -18,7 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(10, 6, 18, 0.999); /* Black background without transparency */
+    background-color: rgba(255, 2, 133, 0.734); /* Black background without transparency */
     border: 2px solid rgb(107, 83, 158); /* Golden border */
     box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
     padding: 20px;
@@ -45,10 +45,9 @@
     }
     50% {
         box-shadow:
-        0px -1px 3px #fff,    /* Intense heat (white) */
         0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
-        0px -10px 20px rgb(51, 54, 204);
+        0px -6px 12px rgb(247, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(255, 15, 211);
     }
     100% {
         box-shadow:
@@ -60,7 +59,7 @@
 }
 
 .profile_picture {
-    width: 100px;
+    width: 80px;
     height: 100px;
     border-radius: 50%;
     margin-left: 20px;
@@ -85,7 +84,7 @@
 .user_info h1 {
     margin: 0;
     font-size: 29px;
-    color: #f5f5f5;
+    color: #f181ddb6;
     text-shadow:
         0px -1px 3px #fff,    /* Intense heat (white) */
         0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
@@ -100,15 +99,15 @@
         text-shadow:
             0px -1px 3px #fff,
             0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-            0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
-            0px -10px 20px rgb(51, 54, 204);
+            0px -6px 12px rgb(247, 0, 255),   /* Body of flame (orange) */
+            0px -10px 20px rgb(255, 15, 211);
     }
     50% {
         text-shadow:
             0px -2px 6px #fff,
             0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-            0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
-            0px -10px 20px rgb(51, 54, 204);
+            0px -6px 12px rgb(255, 0, 106),   /* Body of flame (orange) */
+            0px -10px 20px rgb(249, 19, 122);
     }
 }
 
@@ -120,41 +119,96 @@
     margin: 5px 0 0;
     font-style: italic;
     font-family: 'Permanent Marker', cursive;
-    color: #fefefe; /* Bright pink color */
+    color: #f181ddb6;
+    margin: 0;
+    font-size: 29px;
+    color: #f181ddb6;
     text-shadow:
-        2px 2px 0 #3f1811,  /* Tomato shadow */
-        -2px -2px 0 #ffa500, /* Orange shadow */
-        2px -2px 0 #ffd700,  /* Gold shadow */
-        -2px 2px 0 #adff2f;  /* GreenYellow shadow */
+        0px -1px 3px #fff,    /* Intense heat (white) */
+        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -10px 20px rgb(51, 54, 204);  /* Edges of flame (red) */
+    font-family: 'Courier New', Courier, monospace;
 
         border: 2px solid rgb(213, 208, 224); /* Golden border */
         box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
-    
+        text-align: center;
+        bottom: 20%;
+}
+@keyframes flicker {
+    0%, 100% {
+        text-shadow:
+            0px -1px 3px #fff,
+            0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+            0px -6px 12px rgb(247, 0, 255),   /* Body of flame (orange) */
+            0px -10px 20px rgb(255, 15, 211);
+    }
+    50% {
+        text-shadow:
+            0px -2px 6px #fff,
+            0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+            0px -6px 12px rgb(255, 0, 106),   /* Body of flame (orange) */
+            0px -10px 20px rgb(249, 19, 122);
+    }
 }
 
 .content_section {
     margin-bottom: 20px;
-    
 }
 
 .content_section h2 {
     margin-top: 0;
     font-size: 20px;
     border-bottom: 1px solid #ccc;
-    
 }
 
+.about_me {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.about_image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 2px -6px 12px rgb(247, 0, 255),
+}
+
+.about_content p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+.about_comment {
+    font-style: italic;
+    font-family: 'Permanent Marker', cursive;
+    color: #f4edf2b6;
+    margin: 0;
+    font-size: 29px;
+    color: #fcfcfc;
+
+    font-family: 'Courier New', Courier, monospace;
+        bottom: 20%;
+}
 .desc {
     font-family: 'Permanent Marker', cursive;
     color: #fefefe; /* Bright pink color */
     text-shadow:
-        2px 2px 0 #3f1811,  /* Tomato shadow */
-        -2px -2px 0 #ff0400, /* Orange shadow */
-        2px -2px 0 #ffd700,  /* Gold shadow */
-        -2px 2px 0 #ff2f2f;  /* GreenYellow shadow */
+    0px -1px 3px #fff,
+    0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+    0px -6px 12px rgb(247, 0, 255),   /* Body of flame (orange) */
+    0px -10px 20px rgb(255, 15, 211);
 
         border: 2px solid rgb(213, 208, 224); /* Golden border */
         box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
+        text-align: center;
 }
 
 .controls {
@@ -178,6 +232,40 @@
 }
 .tol_logo {
     position: absolute;
-    bottom: -40px;
-    left: 10px;
+    bottom: 50px;
+    right: 0px;
+    width: 20%;
+}
+.skib_logo {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 20%;
+}
+.slider_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider_section button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.slider_section button:hover {
+    background-color: darkorange;
+}
+
+.slide_image {
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
 }
