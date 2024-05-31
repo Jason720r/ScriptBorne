@@ -6,6 +6,9 @@ import ProfilePicture from './pfp.png';
 import Kitty from './kitty.png';
 import Tol from './toooooilet.png';
 import "./Tanner.css"
+import Slide1 from './Piano.jpg';
+import Slide2 from './Grad.png';
+import Slide3 from './Hog.png';
 
 export const TannerTalk = () => {
     const [showPopup, setShowPopup] = useState(false)
@@ -19,7 +22,11 @@ export const TannerTalk = () => {
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
-    }
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+    };
 
   
 
@@ -59,6 +66,11 @@ export const TannerTalk = () => {
                         <p className="desc">DAMN LOOK AT THIS TOILET
                         
                         DO NOT CLICK IT</p>
+                    </div>
+                    <div className="slider_section">
+                        <button onClick={prevSlide}>{"<"}</button>
+                        <img src={slides[currentSlide]} alt="Slide" className="slide_image" />
+                        <button onClick={nextSlide}>{">"}</button>
                     </div>
                 </div>
             </div>
