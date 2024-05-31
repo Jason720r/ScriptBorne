@@ -206,7 +206,7 @@
 }
 
 .about_image {
-    width: 60%; /* Adjust width to take more space */
+    width: 40%; /* Adjust width to take more space */
     height: auto; /* Maintain aspect ratio */
     margin-right: 20px;
     border-radius: 10px;
@@ -271,13 +271,13 @@
 }
 .tol_logo {
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
     right: 0px;
     width: 20%;
 }
 .skib_logo {
     position: absolute;
-    bottom: 50px;
+    bottom: -320px;
     left: 0px;
     width: 20%;
 }
