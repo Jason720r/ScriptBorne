@@ -5,6 +5,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    
 }
 
 .ruin_home {
@@ -13,14 +14,43 @@
     object-fit: cover;
 }
 
+@keyframes flaming-border {
+    0% {
+        box-shadow:
+            0 0 10px rgba(255, 69, 0, 0.75),
+            0 0 20px rgba(255, 140, 0, 0.75),
+            0 0 30px rgba(255, 69, 0, 0.75),
+            0 0 40px rgba(255, 0, 0, 0.75);
+    }
+    50% {
+        box-shadow:
+            0 0 20px rgba(255, 69, 0, 0.75),
+            0 0 30px rgba(255, 140, 0, 0.75),
+            0 0 40px rgba(255, 69, 0, 0.75),
+            0 0 50px rgba(255, 0, 0, 0.75);
+    }
+    100% {
+        box-shadow:
+            0 0 10px rgba(255, 69, 0, 0.75),
+            0 0 20px rgba(255, 140, 0, 0.75),
+            0 0 30px rgba(255, 69, 0, 0.75),
+            0 0 40px rgba(255, 0, 0, 0.75);
+    }
+}
+
 .centered_container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 2, 133, 0.734); /* Black background without transparency */
-    border: 2px solid rgb(107, 83, 158); /* Golden border */
-    box-shadow: 0 0 10px rgba(96, 60, 178, 0.1);
+    background-color: rgb(253, 14, 181); /* Black background without transparency */
+    border: 2px solid transparent; /* Ensure box-shadow effect is visible */
+    box-shadow:
+        0 0 10px rgba(255, 69, 0, 0.75),
+        0 0 20px rgba(255, 140, 0, 0.75),
+        0 0 30px rgba(255, 69, 0, 0.75),
+        0 0 40px rgba(255, 0, 0, 0.75);
+    animation: flaming-border 2s infinite;
     padding: 20px;
     overflow-y: auto;
 }
