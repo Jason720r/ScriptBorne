@@ -23,7 +23,7 @@ export const NavBar = () => {
 <li className="navbar__item">
     <Link className="nav-link" to="/tanner">
     <i className="fas fa-edit"></i>
-    <div className="about_nav">Tanner Talk</div>
+    <div className="about_nav">SandBox</div>
     <span></span>
 </Link>
 </li>
