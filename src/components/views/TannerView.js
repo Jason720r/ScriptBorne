@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Tanner from './Tanner.png';
 import Ruins from './Ruins.mp4';
-import ProfilePicture from './Tanner.png';
-import Kitty from './kitty.png';
+import ProfilePicture from './Satou.png';
+import Kitty from './chainsaw.png';
 import Tol from './Kittyy.png';
 import "./Tanner.css"
-import Slide1 from './Piano.jpg';
-import Slide2 from './Grad.png';
-import Slide3 from './Hog.png';
-import Goth from './Goth.png';
-import Gif from './giphy.gif';
+import Slide1 from './Goatjo.jpg';
+import Slide2 from './War.png';
+import Slide3 from './Collab.jpg';
+import Slide4 from './Geto.png';
+import Goth from './real.png';
+import Gif from './Gojo.gif';
 import Gif2 from './hellooo.gif';
 
 export const TannerTalk = () => {
@@ -21,7 +22,7 @@ export const TannerTalk = () => {
     const [lastSlide, setLastSlide] = useState(0);
     const navigate = useNavigate()
 
-    const slides = [Slide1, Slide2, Slide3];
+    const slides = [Slide1, Slide2, Slide3, Slide4];
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
@@ -44,7 +45,7 @@ export const TannerTalk = () => {
                         <img src={ProfilePicture} alt="Profile" className="profile_picture" />
                         <div className="user_info">
                             <h1>Username:
-                            Enbyriot
+                            Bloody Sashimi
                             </h1>
                             <p> </p>
                         </div>
@@ -56,27 +57,28 @@ export const TannerTalk = () => {
                         </div>
                         </div>
                         <div className="content_section about_me">
-                <h2>About Me</h2>
+              
             <div className="about_content">
                  <img src={Goth} alt="About Me" className="about_image" />
+                 <div className="about_wrapper">
                  <ul className="about_comment">
-            <li>Catholicism (I'm not religious)</li>
-            <li>Cranking My Hog</li>
-            <li>Hello Kitty</li>
-            <li>Nursing</li>
-            <li>RAHHHHH</li>
+            <li>Welcome to the page, that's it.</li>
+
+        
         </ul>
-                </div>
+                
                         <div className="hello_toilet">
                             <img src={Gif} alt="tol" className="tol_logo"/>
                         </div>
-                        <div className="hello_skibidi">
-                            <img src={Gif2} alt="tol" className="skib_logo"/>
                         </div>
+                        </div>
+                        {/* <div className="hello_skibidi">
+                            <img src={Gif2} alt="tol" className="skib_logo"/>
+                        </div> */}
                     </div>
                     <div className="content_section">
-                        <h2>Construction</h2>
-                        <p className="desc"></p>
+                        <h2>Doodles</h2>
+                        {/* <p className="desc"></p> */}
                     </div>
                     <div className="slider_section">
                         <button onClick={prevSlide}>{"<"}</button>

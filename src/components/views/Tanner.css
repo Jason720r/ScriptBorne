@@ -45,7 +45,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(253, 14, 181); /* Black background without transparency */
+    background-color: rgb(0, 0, 0); /* Black background without transparency */
     border: 2px solid transparent; /* Ensure box-shadow effect is visible */
     box-shadow:
         0 0 10px rgba(255, 69, 0, 0.75),
@@ -71,28 +71,28 @@
     0% {
         box-shadow:
         0px -1px 3px #fff,    /* Intense heat (white) */
-        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
-        0px -10px 20px rgb(51, 54, 204);
+        0px -2px 6px rgb(13, 3, 67),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(30, 5, 66),   /* Body of flame (orange) */
+        0px -10px 20px rgb(5, 5, 21);
     }
     50% {
         box-shadow:
-        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(247, 0, 255),   /* Body of flame (orange) */
-        0px -10px 20px rgb(255, 15, 211);
+        0px -2px 6px rgb(40, 5, 5),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(3, 5, 53),   /* Body of flame (orange) */
+        0px -10px 20px rgb(32, 20, 30);
     }
     100% {
         box-shadow:
         0px -1px 3px #fff,    /* Intense heat (white) */
-        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
+        0px -2px 6px rgb(10, 2, 11),    /* Core of flame (yellow) */
+        0px -6px 12px rgb(0, 0, 0),   /* Body of flame (orange) */
         0px -10px 20px rgb(51, 54, 204);
     }
 }
 
 .profile_picture {
-    width: 80px;
-    height: 100px;
+    width: 100px;
+    height: 90px;
     border-radius: 50%;
     margin-left: 20px;
     animation: flaming-border 2s infinite;
@@ -104,8 +104,8 @@
 }
 
 .kitty_logo {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    width: 100px; /* Adjust size as needed */
+    height: 90px; /* Adjust size as needed */
 }
 
 .user_info {
@@ -116,12 +116,8 @@
 .user_info h1 {
     margin: 0;
     font-size: 29px;
-    color: #000000b6;
-    text-shadow:
-        0px -1px 3px #fff,    /* Intense heat (white) */
-        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
-        0px -10px 20px rgb(51, 54, 204);  /* Edges of flame (red) */
+    color: #ffffff;
+
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -143,21 +139,19 @@
     }
 }
 
-.user_info h1 {
-    animation: flicker 2s infinite;
-}
+
 
 .user_info p {
     margin: 5px 0 0;
     font-style: italic;
     font-family: 'Permanent Marker', cursive;
-    color: #f181ddb6;
+    color: #5a2d51b6;
     margin: 0;
     font-size: 29px;
-    color: #f181ddb6;
+    color: #2f162ab6;
     text-shadow:
         0px -1px 3px #fff,    /* Intense heat (white) */
-        0px -2px 6px rgb(218, 51, 255),    /* Core of flame (yellow) */
+        0px -2px 6px rgb(64, 38, 70),    /* Core of flame (yellow) */
         0px -6px 12px rgb(106, 0, 255),   /* Body of flame (orange) */
         0px -10px 20px rgb(51, 54, 204);  /* Edges of flame (red) */
     font-family: 'Courier New', Courier, monospace;
@@ -208,15 +202,29 @@
 .about_image {
     width: 40%; /* Adjust width to take more space */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 20px;
+    margin-right: 50px;
     border-radius: 10px;
     border: 2px solid #ccc;
 }
 
 .about_content p {
-    margin: 0;
+    margin: 10;
     font-size: 16px;
     color: #333;
+}
+.about_wrapper {
+    background-color: white;
+    padding: 80px;
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(2, 1, 1);
+    box-shadow:
+    0 0 10px rgba(255, 69, 0, 0.75),
+    0 0 20px rgba(255, 140, 0, 0.75),
+    0 0 30px rgba(255, 69, 0, 0.75),
+    0 0 40px rgba(255, 0, 0, 0.75);
+animation: flaming-border 2s infinite;
 }
 
 .about_comment {
@@ -224,17 +232,26 @@
     color: #000000;
     margin: 0;
     font-size: 20px;
-    text-shadow:
-        0px -1px 3px #fff,
-        0px -2px 6px rgb(218, 51, 255),
-        0px -6px 12px rgb(106, 0, 255),
-        0px -10px 20px rgb(51, 54, 204);
     list-style-type: none; /* Remove default bullet points */
     padding: 0;
+    
 }
 
 .about_comment li {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+}
+
+.hello_toilet {
+    margin-top: 20px;
+    text-align: left;
+    transform: rotateY(180deg);
+    margin-left: 430px;
+}
+
+.tol_logo {
+    width: 110px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    
 }
 .desc {
     font-family: 'Permanent Marker', cursive;
@@ -269,12 +286,7 @@
 .controls button {
     margin-left: 5px;
 }
-.tol_logo {
-    position: absolute;
-    bottom: 80px;
-    right: 0px;
-    width: 20%;
-}
+
 .skib_logo {
     position: absolute;
     bottom: -320px;
