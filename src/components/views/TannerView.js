@@ -32,6 +32,8 @@ export const TannerTalk = () => {
         setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
     };
 
+//With the help of a little GPT and some re-usable code, the start of the bootleg MySpace saga begins
+
   
 
     return (
@@ -56,37 +58,29 @@ export const TannerTalk = () => {
                             <img src={Kitty} alt="Kitty" className="kitty_logo"/>
                         </div>
                         </div>
-                        <div className="content_section about_me">
-              
-            <div className="about_content">
-                 <img src={Goth} alt="About Me" className="about_image" />
-                 <div className="about_wrapper">
-                 <ul className="about_comment">
-            <li>Welcome to the page, that's it.</li>
-
-        
-        </ul>
-                
+                        <div className="slider_section">
+                <button onClick={prevSlide}>{"<"}</button>
+                <img src={slides[currentSlide]} alt="Slide" className="slide_image" />
+                <button onClick={nextSlide}>{">"}</button>
+            </div>
+            <div className="content_section about_me">
+                <div className="about_content">
+                    <div className="about_wrapper">
+                        <ul className="about_comment">
+                            <li>Welcome to the page, that's it.</li>
+                        </ul>
                         <div className="hello_toilet">
-                            <img src={Gif} alt="tol" className="tol_logo"/>
+                            <img src={Gif} alt="tol" className="tol_logo" />
                         </div>
-                        </div>
-                        </div>
-                        {/* <div className="hello_skibidi">
-                            <img src={Gif2} alt="tol" className="skib_logo"/>
-                        </div> */}
                     </div>
-                    <div className="content_section">
-                        <h2>Doodles</h2>
-                        {/* <p className="desc"></p> */}
-                    </div>
-                    <div className="slider_section">
-                        <button onClick={prevSlide}>{"<"}</button>
-                        <img src={slides[currentSlide]} alt="Slide" className="slide_image" />
-                        <button onClick={nextSlide}>{">"}</button>
-                    </div>
+                    <img src={Goth} alt="About Me" className="about_image" />
                 </div>
             </div>
+            {/* <div className="hello_skibidi">
+                <img src={Gif2} alt="tol" className="skib_logo" />
+            </div> */}
+        </div>
+    </div>
             
         </div>
     );
