@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Tanner from './Tanner.png';
-import Ruins from './Ruins.mp4';
+import Toji from './RetroMove.mp4';
+import Name from './Sashimi.gif';
 import ProfilePicture from './Satou.png';
 import Kitty from './chainsaw.png';
 import Tol from './Kittyy.png';
@@ -15,6 +16,8 @@ import Gif from './Gojo.gif';
 import Gif2 from './hellooo.gif';
 
 export const TannerTalk = () => {
+    const [jasonPopupOpen, setJasonPopupOpen] = useState(false);
+    const [jasonInteraction, setJasonInteraction] = useState("start");
     const [showPopup, setShowPopup] = useState(false)
     const [width, setWidth] = useState(1000);
     const [height, setHeight] = useState(700);
@@ -32,42 +35,63 @@ export const TannerTalk = () => {
         setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
     };
 
-//With the help of a little GPT and some re-usable code, the start of the bootleg MySpace saga begins
+    const handleInteractionJason = () => {
+        setJasonPopupOpen(true);
+        setJasonInteraction("start");
+      }
 
-  
 
     return (
         <div>
+            
             <div className="tanner_container">
                 <video autoPlay loop muted className="ruin_home">
-                    <source src={Ruins} type="video/mp4" />
+                    <source src={Toji} type="video/mp4" />
                 </video>
                 <div className="centered_container" style={{ width: `${width}px`, height: `${height}px` }}>
                     <div className="profile_section">
                         <img src={ProfilePicture} alt="Profile" className="profile_picture" />
                         <div className="user_info">
-                            <h1>Username:
-                            Bloody Sashimi
-                            </h1>
-                            <p> </p>
+                    <img src={Name} alt="Username" className="username_gif" />
                         </div>
-                    
                     </div>
-                    <div className="kitty_container" >
-                    <div className="hello_kitty">
-                            <img src={Kitty} alt="Kitty" className="kitty_logo"/>
-                        </div>
-                        </div>
+                    <hr className="separator" />
+                    <div className="doodle"> doodles </div>
+                    <hr className="separator_two" />
                         <div className="slider_section">
                 <button onClick={prevSlide}>{"<"}</button>
                 <img src={slides[currentSlide]} alt="Slide" className="slide_image" />
                 <button onClick={nextSlide}>{">"}</button>
+                <div className="vertical_line"></div>
+                <div className="spotify_container">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/5hVghJ4KaYES3BFUATCYn0?utm_source=generator"
+                        width="380"
+                        height="180"
+                        frameBorder="0"
+                        allowtransparency="true"
+                        allow="encrypted-media"
+                        title="Spotify Player"
+                    ></iframe>
+                </div>
+                
             </div>
             <div className="content_section about_me">
                 <div className="about_content">
                     <div className="about_wrapper">
                         <ul className="about_comment">
-                            <li>Welcome to the page, that's it.</li>
+                            <li>It's a work in progress, that's it.</li>
+                            <div className="npc_two_container">
+                <img
+            src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJIYWlyTG93ZXIiOiIyMCIsIkJvZHkiOiIxIiwiRXllcyI6IjQiLCJNb3V0aCI6IjQiLCJVbmRlcndlYXIiOiI0IiwiU2hvZXMiOiI1IiwiR2xvdmVzIjoiMyIsIlBhbnRzIjoiMiIsIkphY2tldCI6IjYiLCJOZWNrIjoiMSIsIkhhaXIiOiI2IiwiSGF0IjoiNCIsImV5ZXNUb25lIjoiYzY5NjFjIiwiZXllc1RvbmUyIjoiYWFjYWQxIiwibWFza1RvbmUiOiIyZTVhNDQiLCJ1bmRlcndlYXJUb25lIjoiMjI0MDA4IiwicGFudHNUb25lIjoiNDQ0NDQ0IiwidG9wVG9uZSI6IjI2ODc1NiIsIndpbmdzVG9uZSI6IjdmNDQ0NCIsIndpbmdzVG9uZTIiOiI4ZTM1MzUiLCJzaG9lc1RvbmUiOiJjNjk2MWMiLCJnbG92ZXNUb25lIjoiYzM4ZDQwIiwiaGF0VG9uZSI6IjM3NTM2ZSIsImhhdFRvbmUyIjoiYzM4ZDQwIiwiamFja2V0VG9uZSI6ImQyZDJkMiIsIm5lY2tUb25lIjoiYzM4ZDQwIn0=/1/show.png"
+            alt="Jason"
+            className="npc_two"
+            onClick={() => handleInteractionJason("Jason")}
+          />
+          <div className="npc_bubble">
+                        <p>BLEGHGHGHEHGEH!</p>
+                    </div>
+            </div>
                         </ul>
                         <div className="hello_toilet">
                             <img src={Gif} alt="tol" className="tol_logo" />
@@ -79,9 +103,10 @@ export const TannerTalk = () => {
             {/* <div className="hello_skibidi">
                 <img src={Gif2} alt="tol" className="skib_logo" />
             </div> */}
+                            <img src={Kitty} alt="Kitty" className="kitty_logo"/>
         </div>
     </div>
-            
+
         </div>
     );
 }

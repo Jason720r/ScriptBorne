@@ -85,8 +85,8 @@
         box-shadow:
         0px -1px 3px #fff,    /* Intense heat (white) */
         0px -2px 6px rgb(10, 2, 11),    /* Core of flame (yellow) */
-        0px -6px 12px rgb(0, 0, 0),   /* Body of flame (orange) */
-        0px -10px 20px rgb(51, 54, 204);
+        0px -6px 12px rgb(16, 13, 105),   /* Body of flame (orange) */
+        0px -10px 20px rgb(80, 13, 13);
     }
 }
 
@@ -94,19 +94,10 @@
     width: 150px;
     height: 130px;
     border-radius: 50%;
-    margin-left: 20px;
-    animation: flaming-border 2s infinite;
-}
-.hello_kitty {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    margin-left: 800px;
+    border: solid rgb(121, 69, 100);
 }
 
-.kitty_logo {
-    width: 140px; /* Adjust size as needed */
-    height: 140px; /* Adjust size as needed */
-}
 
 .user_info {
     text-align: right;
@@ -138,7 +129,11 @@
             0px -10px 20px rgb(249, 19, 122);
     }
 }
+.username_gif {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 
+}
 
 
 .user_info p {
@@ -177,6 +172,35 @@
             0px -10px 20px rgb(249, 19, 122);
     }
 }
+
+.separator {
+    border: none;
+    border-top: 2px solid rgb(121, 69, 100); /* Adjust thickness and color */
+    margin: 0 0 0 0; /* Adjust space around the separator */
+    width: calc(90% + 110px); /* Adjust width to align with vertical line */
+    position: relative;
+    top: -19px; /* Adjust to align with vertical line */
+}
+
+.separator_two{
+    border: none;
+    border-top: 2px solid rgb(121, 69, 100); /* Adjust thickness and color */
+    margin: 0 0 0 0; /* Adjust space around the separator */
+    width: calc(90% + 110px); /* Adjust width to align with vertical line */
+    position: relative;
+    top: 15px; /* Adjust to align with vertical line */
+}
+
+
+.vertical_line {
+    width: 2px;
+    height: 310px; /* Match the height of the slide image */
+    background-color: white; /* Adjust color as needed */
+    margin: 0 20px; /* Space between the slide and Spotify container */
+    position: relative;
+    top: -5px;
+}
+
 
 .content_section {
     margin-bottom: 20px;
@@ -294,10 +318,36 @@ animation: flaming-border 2s infinite;
     left: 0px;
     width: 20%;
 }
+
+.kitty_logo {
+    width: 250px; 
+    height: 250px; 
+    margin-left: 20px; 
+    margin-top: 20px; 
+}
+
+.npc_two_container {
+    position: center;
+ 
+}
+
+.npc_two_container {
+    position: absolute;
+    right: 800px; 
+    bottom: -40px; 
+}
+.doodle {
+    font-family: 'Black Han Sans', sans-serif;
+    margin-left: 100px; 
+}
+.npc_two {
+    width: 140px; 
+    height: 100px;
+}
 .slider_section {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 20px;
 }
 
@@ -312,12 +362,17 @@ animation: flaming-border 2s infinite;
 }
 
 .slider_section button:hover {
-    background-color: darkorange;
+    background-color: rgb(86, 82, 82);
 }
 
 .slide_image {
     max-width: 300px;
     max-height: 300px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 10px;
+    border: 6px solid rgb(121, 69, 100);
+    border-radius: 0px;
 }
+.spotify_container {
+    margin-left: 170px; 
+}
+
+
