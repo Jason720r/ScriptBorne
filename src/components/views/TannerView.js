@@ -28,11 +28,28 @@ export const TannerTalk = () => {
     const [playerDamage, setPlayerDamage] = useState(10);
     const [enemyDamage, setEnemyDamage] = useState(10);
     const [randomChance, setChance] = useState(false);
+    const [isPlayerTurn, setIsPlayerTurn] = useState(true);
+    const [isEnemyTurn, setIsEnemyTurn] = useState(true)
+    const [healthUses, setHealthUses] = useState(0);
+    const [showAttack, setShowAttack] = useState(false);
 
     const navigate = useNavigate()
     
 
     const slides = [Slide1, Slide2, Slide3, Slide4];
+
+    const handleAttack = () => {
+        if (isPlayerTurn) {
+            setShowAttack(true);
+            setTimeout(() => {
+
+                setEnemyHealth(enemyHealth - playerDamage);
+                setShowAttack(false);
+                setIsPlayerTurn(false)
+            }, 500)
+            
+        }
+    }
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
