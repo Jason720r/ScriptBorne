@@ -26,8 +26,8 @@
 
   .npc_two {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 51%;
     transform: translate(-400%, 120%);
     width: 10%;
   }

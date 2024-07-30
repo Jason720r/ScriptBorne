@@ -165,9 +165,9 @@ const handleNolaBattle = () => {
           Brahm
         </button>
 
-        <button onClick={ handleInteractionTanner} className="interact_tanner">
+        {/* <button onClick={ handleInteractionTanner} className="interact_tanner">
           Tanner
-        </button>
+        </button> */}
 
         </div>
   

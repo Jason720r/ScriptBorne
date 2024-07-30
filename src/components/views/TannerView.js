@@ -23,7 +23,14 @@ export const TannerTalk = () => {
     const [height, setHeight] = useState(700);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [lastSlide, setLastSlide] = useState(0);
+    const [playerHealth, setPlayerHealth] = useState(100);
+    const [enemyHealth, setEnemyHealth] = useState(100);
+    const [playerDamage, setPlayerDamage] = useState(10);
+    const [enemyDamage, setEnemyDamage] = useState(10);
+    const [randomChance, setChance] = useState(false);
+
     const navigate = useNavigate()
+    
 
     const slides = [Slide1, Slide2, Slide3, Slide4];
 
