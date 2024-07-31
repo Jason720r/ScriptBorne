@@ -90,12 +90,13 @@ export const TannerTalk = () => {
                 <div className="spotify_container">
                     <iframe
                         src="https://open.spotify.com/embed/track/5hVghJ4KaYES3BFUATCYn0?utm_source=generator"
-                        width="380"
-                        height="180"
+                        width="490"
+                        height="270"
                         frameBorder="0"
                         allowtransparency="true"
                         allow="encrypted-media"
                         title="Spotify Player"
+                        className="spotify_iframe"
                     ></iframe>
                 </div>
                 

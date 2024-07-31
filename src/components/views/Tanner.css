@@ -195,7 +195,7 @@
 .vertical_line {
     width: 2px;
     height: 310px; /* Match the height of the slide image */
-    background-color: white; /* Adjust color as needed */
+    background-color: rgb(121, 69, 100);  /* Adjust color as needed */
     margin: 0 20px; /* Space between the slide and Spotify container */
     position: relative;
     top: -5px;
@@ -372,7 +372,22 @@ animation: flaming-border 2s infinite;
     border-radius: 0px;
 }
 .spotify_container {
-    margin-left: 170px; 
+    margin-left: 50px; 
+    box-shadow:
+    0 0px 0 6px rgb(121, 69, 100), /* Outer border */
+    0 0 1px 8px rgba(239, 209, 209, 0.5); /* Inner border */
+    border-radius: 13px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: inline-block; /* Fit to the size of the content */
+    width: 480px; /* Adjust width to match the iframe */
+    height: 220px;
+}
+
+
+
+.spotify_iframe {
+    border-radius: 0; /* Remove rounded corners */
+    display: block; /* Ensure iframe takes the full space */
 }
 
 
