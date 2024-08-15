@@ -15,6 +15,8 @@ import Slide5 from './Sukuna.JPG';
 import Goth from './real.png';
 import Gif from './Gojo.gif';
 import Gif2 from './hellooo.gif';
+import { BattleTime } from "./BattleView.js";
+import './Battle.css';
 
 export const FunkyTalk = () => {
     const [jasonPopupOpen, setJasonPopupOpen] = useState(false);
@@ -137,17 +139,11 @@ export const FunkyTalk = () => {
           </div>
             </div>
                         </ul>
-                        <div className="hello_toilet">
-                            <img src={Gif} alt="tol" className="tol_logo" />
-                        </div>
                     </div>
-                    <img src={Goth} alt="About Me" className="about_image" />
+
                 </div>
             </div>
-            {/* <div className="hello_skibidi">
-                <img src={Gif2} alt="tol" className="skib_logo" />
-            </div> */}
-                            <img src={Kitty} alt="Kitty" className="kitty_logo"/>
+                <BattleTime />
         </div>
     </div>
 
