@@ -8,7 +8,7 @@ import { Stage } from "./components/views/OtherView.js";
 import { BrahmCity } from "./components/views/BrahmCity.js";
 import { BattleTime } from "./components/views/BattleView.js";
 import { BattleNola } from "./components/views/NolaBattle.js";
-import { TannerTalk } from "./components/views/TannerView.js";
+import { FunkyTalk } from "./components/views/FunkyView.js";
 
 
 export const ApplicationViews =() => {
@@ -23,7 +23,7 @@ export const ApplicationViews =() => {
         <Route path="/city" element={<BrahmCity />} />
         <Route path="/brass" element={<BattleTime />} />
         <Route path="/nola" element={<BattleNola />} />
-        <Route path="/tanner" element={<TannerTalk/>} />
+        <Route path="/funky" element={<FunkyTalk/>} />
         
         </Routes></>
     

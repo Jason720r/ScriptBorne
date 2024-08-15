@@ -21,9 +21,9 @@ export const NavBar = () => {
 </Link>
 </li>
 <li className="navbar__item">
-    <Link className="nav-link" to="/tanner">
+    <Link className="nav-link" to="/funky">
     <i className="fas fa-edit"></i>
-    <div className="about_nav">SandBox</div>
+    <div className="about_nav">Funkz</div>
     <span></span>
 </Link>
 </li>

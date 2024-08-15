@@ -15,7 +15,7 @@ import Goth from './real.png';
 import Gif from './Gojo.gif';
 import Gif2 from './hellooo.gif';
 
-export const TannerTalk = () => {
+export const FunkyTalk = () => {
     const [jasonPopupOpen, setJasonPopupOpen] = useState(false);
     const [jasonInteraction, setJasonInteraction] = useState("start");
     const [showPopup, setShowPopup] = useState(false)
@@ -104,6 +104,17 @@ export const TannerTalk = () => {
             <div className="content_section about_me">
                 <div className="about_content">
                     <div className="about_wrapper">
+                    <div className="youtube_video">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/2B0uQzo0St0"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
                         <ul className="about_comment">
                             <li>It's a work in progress, that's it.</li>
                             <div className="npc_two_container">
