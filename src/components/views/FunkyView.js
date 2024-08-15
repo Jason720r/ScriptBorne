@@ -6,11 +6,12 @@ import Name from './Sashimi.gif';
 import ProfilePicture from './Satou.png';
 import Kitty from './chainsaw.png';
 import Tol from './Kittyy.png';
-import "./Tanner.css"
+import "./Funky.css"
 import Slide1 from './Goatjo.jpg';
 import Slide2 from './War.png';
 import Slide3 from './Collab.jpg';
 import Slide4 from './Geto.png';
+import Slide5 from './Sukuna.JPG';
 import Goth from './real.png';
 import Gif from './Gojo.gif';
 import Gif2 from './hellooo.gif';
@@ -36,7 +37,7 @@ export const FunkyTalk = () => {
     const navigate = useNavigate()
     
 
-    const slides = [Slide1, Slide2, Slide3, Slide4];
+    const slides = [Slide1, Slide2, Slide3, Slide4, Slide5];
 
     const handleAttack = () => {
         if (isPlayerTurn) {
@@ -116,7 +117,7 @@ export const FunkyTalk = () => {
                 ></iframe>
             </div>
                         <ul className="about_comment">
-                            <li>It's a work in progress, that's it.</li>
+                            <li>Below I included the component of a "game" I made, thank gawd for GPT.</li>
                             <div className="npc_two_container">
                 <img
             src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJIYWlyTG93ZXIiOiIyMCIsIkJvZHkiOiIxIiwiRXllcyI6IjQiLCJNb3V0aCI6IjQiLCJVbmRlcndlYXIiOiI0IiwiU2hvZXMiOiI1IiwiR2xvdmVzIjoiMyIsIlBhbnRzIjoiMiIsIkphY2tldCI6IjYiLCJOZWNrIjoiMSIsIkhhaXIiOiI2IiwiSGF0IjoiNCIsImV5ZXNUb25lIjoiYzY5NjFjIiwiZXllc1RvbmUyIjoiYWFjYWQxIiwibWFza1RvbmUiOiIyZTVhNDQiLCJ1bmRlcndlYXJUb25lIjoiMjI0MDA4IiwicGFudHNUb25lIjoiNDQ0NDQ0IiwidG9wVG9uZSI6IjI2ODc1NiIsIndpbmdzVG9uZSI6IjdmNDQ0NCIsIndpbmdzVG9uZTIiOiI4ZTM1MzUiLCJzaG9lc1RvbmUiOiJjNjk2MWMiLCJnbG92ZXNUb25lIjoiYzM4ZDQwIiwiaGF0VG9uZSI6IjM3NTM2ZSIsImhhdFRvbmUyIjoiYzM4ZDQwIiwiamFja2V0VG9uZSI6ImQyZDJkMiIsIm5lY2tUb25lIjoiYzM4ZDQwIn0=/1/show.png"
@@ -124,9 +125,16 @@ export const FunkyTalk = () => {
             className="npc_two"
             onClick={() => handleInteractionJason("Jason")}
           />
+        <div className="npc_speaking">
           <div className="npc_bubble">
-                        <p>BLEGHGHGHEHGEH!</p>
+                        <p>Yo welcome to my personal page, def still a work in progress but right above are some sketches I do, next to it is the song I've been bumping lately(don't forget to press play), and to our right is my failed attempt at making a YT video three years about Anime Openings</p>
                     </div>
+                    <img
+            src="http://www.avatarsinpixels.com/minipix/eyJXaW5ncyI6IjMiLCJIYWlyTG93ZXIiOiIyMCIsIkJvZHkiOiIxIiwiRXllcyI6IjQiLCJNb3V0aCI6IjQiLCJVbmRlcndlYXIiOiI0IiwiU2hvZXMiOiI1IiwiR2xvdmVzIjoiMyIsIlBhbnRzIjoiMiIsIkphY2tldCI6IjYiLCJOZWNrIjoiMSIsIkhhaXIiOiI2IiwiSGF0IjoiNCIsImV5ZXNUb25lIjoiYzY5NjFjIiwiZXllc1RvbmUyIjoiYWFjYWQxIiwibWFza1RvbmUiOiIyZTVhNDQiLCJ1bmRlcndlYXJUb25lIjoiMjI0MDA4IiwicGFudHNUb25lIjoiNDQ0NDQ0IiwidG9wVG9uZSI6IjI2ODc1NiIsIndpbmdzVG9uZSI6IjdmNDQ0NCIsIndpbmdzVG9uZTIiOiI4ZTM1MzUiLCJzaG9lc1RvbmUiOiJjNjk2MWMiLCJnbG92ZXNUb25lIjoiYzM4ZDQwIiwiaGF0VG9uZSI6IjM3NTM2ZSIsImhhdFRvbmUyIjoiYzM4ZDQwIiwiamFja2V0VG9uZSI6ImQyZDJkMiIsIm5lY2tUb25lIjoiYzM4ZDQwIn0=/1/show.png"
+            alt="Jason"
+            className="npc_jason"
+          />
+          </div>
             </div>
                         </ul>
                         <div className="hello_toilet">

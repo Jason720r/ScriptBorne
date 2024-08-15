@@ -98,6 +98,54 @@
     border: solid rgb(121, 69, 100);
 }
 
+.npc_speaking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -160px;
+}
+.npc_bubble {
+    position: relative;
+    background: #ffffff; /* White background for the speech bubble */
+    border: 2px solid #000000; /* Black border typical of manga bubbles */
+    border-radius: 15px; /* Rounded edges */
+    padding: 10px 20px;
+    max-width: 300px; /* Adjust width based on your content */
+    font-family: 'Permanent Marker', cursive; /* Matching the font style with manga effect */
+    font-size: 14px;
+    color: #000000; /* Black text color */
+    box-shadow: 2px 2px 0px #000000; /* Slight shadow to give a 3D effect */
+}
+
+.npc_bubble:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    width: 10;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ffffff; /* Match the bubble background */
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px #000000; /* Match the bubble shadow */
+}
+
+.npc_bubble p {
+    text-shadow: none; /* Remove any text shadow */
+    margin: 0; /* Reset margin for the paragraph */
+    padding: 0; /* Reset padding for the paragraph */
+}
+
+.npc_jason {
+    margin-top: -10px; /* Slight overlap with the bubble */
+    width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the character is above other elements */
+}
 
 .user_info {
     text-align: right;
@@ -238,18 +286,31 @@
     color: #333;
 }
 .about_wrapper {
-    background-color: white;
+    background-color: rgb(64, 38, 70);
     padding: 20px;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 2px solid rgb(2, 1, 1);
     box-shadow:
-    0 0 10px rgba(255, 69, 0, 0.75),
-    0 0 20px rgba(255, 140, 0, 0.75),
-    0 0 30px rgba(255, 69, 0, 0.75),
-    0 0 40px rgba(255, 0, 0, 0.75);
-animation: flaming-border 2s infinite;
+    0 0 10px rgba(90, 41, 213, 0.75),
+    0 0 20px rgba(119, 4, 4, 0.75),
+    0 0 30px rgba(87, 25, 210, 0.75),
+    0 0 40px rgba(52, 6, 177, 0.75);
+}
+
+.youtube_video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.youtube_video iframe {
+    border: 2px solid rgb(38, 9, 78); /* Optional: Add a border similar to other elements */
+    box-shadow: 0 0 10px rgba(96, 60, 178, 0.1); /* Optional: Add a slight shadow */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 .about_comment {
